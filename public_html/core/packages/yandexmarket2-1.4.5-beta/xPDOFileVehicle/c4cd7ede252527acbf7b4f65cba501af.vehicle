@@ -1,0 +1,17 @@
+<?php return array (
+  'class' => 'xPDOFileVehicle',
+  'vehicle_class' => 'xPDOFileVehicle',
+  'vehicle_package' => 'transport',
+  'namespace' => 'yandexmarket2',
+  'uninstall_files' => false,
+  'object' => 
+  array (
+    'source' => 'yandexmarket2-1.4.5-beta/xPDOFileVehicle/c4cd7ede252527acbf7b4f65cba501af/',
+    'target' => 'return MODX_CORE_PATH . \'components/yandexmarket2/\';',
+    'name' => 'encryptedvehicle.class.php',
+  ),
+  'guid' => '694e345b1dccda8df818a53ac6867a8a',
+  'package' => '',
+  'signature' => 'c4cd7ede252527acbf7b4f65cba501af',
+  'native_key' => NULL,
+);

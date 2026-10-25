@@ -1,0 +1,92 @@
+<?php
+/**
+ * Resolve creating needed statuses
+ *
+ * @var xPDOObject $object
+ * @var array $options
+ */
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+
+
+            // add new resource group resource system
+            if($resource = $modx->getObject('modResource', array('uri' => 'system/'))) {
+
+                $resourceGroup_id = BUILD_PARAMS_GROUP_RESOURCE;
+                $id = $resource->get('id');
+
+                if (!$opt = $modx->getObject('modResourceGroupResource', array('document' => $id, 'document_group' => $resourceGroup_id))) {
+                    $opt = $modx->newObject('modResourceGroupResource');
+                    $opt->set('document_group', $resourceGroup_id);
+                    $opt->set('document', $id);
+                    $opt->save();
+                }
+
+            }
+
+            /* Создание пользователя */
+            $username = 'manager';
+            if(!$user = $modx->getObject('modUser', array('username' => $username))){
+
+                // get administrator
+                $email = 'mail@mail.ru';
+                if($userAdministrator = $modx->getObject('modUser', 1)){
+                    $profileAdministrator = $userAdministrator->getOne('Profile');
+                    $email = $profileAdministrator->get('email');
+                }
+
+                // создаем пользователя
+                $user = $modx->newObject('modUser');
+                $user->set('username', $username);
+                $user->save();
+                $profile = $modx->newObject('modUserProfile');
+                $profile->set('fullname',   'Менеджер сайта');
+                $profile->set('email',      $email);
+                $user->set('password', 'manager');
+                $user->addOne($profile);
+                $profile->save();
+                $user->save();
+
+            }
+
+
+            // создаем объект типа modUserGroupMember
+            $data = array(
+                'member'     => $user->get('id'),
+                'user_group' => BUILD_PARAMS_USER_GROUP,
+                'role'       => BUILD_PARAMS_ROLE_MANAGER_ID
+            );
+
+            if(!$groupMember = $modx->getObject('modUserGroupMember', $data)){
+                $groupMember = $modx->newObject('modUserGroupMember');
+                $groupMember->fromArray($data);
+                $groupMember->save();
+            }
+
+            // Добавление настроек менеджеру
+            if(!$getSetting = $modx->getObject('modUserSetting', array('user' => $user->get('id'), 'key' => 'default_media_source'))){
+                $getSetting = $modx->newObject('modUserSetting');
+            }
+
+            $getSetting->set('user',  $user->get('id'));
+            $getSetting->set('key', 'default_media_source');
+            $getSetting->set('value', $modx->getObject('sources.modMediaSource', array('name' => 'Manager'))->get('id'));
+            $getSetting->set('xtype', 'modx-combo-source');
+            $getSetting->set('namespace', 'core');
+            $getSetting->save();
+
+            $user->save();
+
+        break;
+
+		case xPDOTransport::ACTION_UNINSTALL:
+			break;
+	}
+}
+return true;

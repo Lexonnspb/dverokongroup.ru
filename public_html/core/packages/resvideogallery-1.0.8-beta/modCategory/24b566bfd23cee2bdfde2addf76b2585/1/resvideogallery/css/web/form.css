@@ -1,0 +1,134 @@
+.rvg-form {
+    transition: opacity .4s ease-in-out;
+}
+.rvg-form-loading {
+    opacity: .7;
+}
+
+.rvg-form label {
+    display: block;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.8;
+    color: #0a0a0a;
+}
+
+.rvg-form input,
+.rvg-form textarea {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.4375rem;
+    padding: 0.5rem;
+    border: 1px solid #cacaca;
+    margin: 0 0 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0a0a0a;
+    background-color: #fefefe;
+    -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    border-radius: 0;
+    -webkit-transition: -webkit-box-shadow 0.5s, border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.rvg-form textarea {
+    min-height: 50px;
+}
+
+.rvg-form input:focus,
+.rvg-form textarea:focus {
+    border: 1px solid #8a8a8a;
+    background-color: #fefefe;
+    outline: none;
+    -webkit-box-shadow: 0 0 5px #cacaca;
+    box-shadow: 0 0 5px #cacaca;
+    -webkit-transition: -webkit-box-shadow 0.5s, border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+}
+
+.rvg-form-btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.85em 1em;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    background-color: #2199e8;
+    color: #fefefe;
+    text-decoration: none;
+}
+
+.rvg-form-btn:hover,
+.rvg-form-btn:focus {
+    background-color: #1583cc;
+    color: #fefefe;
+}
+
+.rvg-form-url-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.rvg-form-btn-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8em 1em;
+    background: #aa1111;
+    font-weight: 700;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.rvg-form-btn-remove:hover,
+.rvg-form-btn-remove:focus {
+    background-color: #901111;
+    color: #fefefe;
+}
+
+.rvg-form-video.rvg-form-scraped:hover .rvg-form-btn-remove {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.rvg-form-video {
+    margin-bottom: 25px;
+}
+
+.rvg-form-video:last-child {
+    margin-bottom: 0;
+}
+
+.rvg-form-video-info {
+    display: none;
+}
+
+.rvg-form-thumb {
+    display: block;
+    width: 333px;
+    margin-bottom: 10px;
+   /* height: 198px;*/
+}
+
+.rvg-form-error {
+    color: #bc1111;
+}
+
+.rvg-form-error,
+.rvg-form-notice {
+    display: none;
+}

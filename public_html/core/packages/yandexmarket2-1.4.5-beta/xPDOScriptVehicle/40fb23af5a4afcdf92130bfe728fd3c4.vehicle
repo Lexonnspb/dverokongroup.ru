@@ -1,0 +1,14 @@
+<?php return array (
+  'class' => 'xPDOScriptVehicle',
+  'vehicle_class' => 'xPDOScriptVehicle',
+  'vehicle_package' => 'transport',
+  'namespace' => 'yandexmarket2',
+  'guid' => 'e25d41030e72539528e12ba89df5c9e3',
+  'native_key' => 'e25d41030e72539528e12ba89df5c9e3',
+  'object' => 
+  array (
+    'source' => 'yandexmarket2-1.4.5-beta/xPDOScriptVehicle/40fb23af5a4afcdf92130bfe728fd3c4.encryption.script',
+  ),
+  'package' => '',
+  'signature' => '40fb23af5a4afcdf92130bfe728fd3c4',
+);

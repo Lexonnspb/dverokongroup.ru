@@ -1,0 +1,135 @@
+/* videos list */
+.resvideogallery-videos { float:left; }
+.resvideogallery-thumb-wrap { cursor: pointer; }
+.resvideogallery-thumb-wrap:hover {border: 1px solid #AAA;}
+.resvideogallery-thumb-wrap.inactive {opacity: .5; border-color: darkgoldenrod;}
+.resvideogallery-thumb,
+.resvideogallery-thumb img {
+	position: relative;
+	width: 333px;
+	height: 198px;
+}
+.resvideogallery-thumb-time {
+	position: absolute;
+	display: inline-block;
+	top: 10px;
+	right: 10px;
+	padding: 4px 10px;
+	border-radius: 2px;
+	line-height: normal;
+	color: #fff;
+	background: rgba(0,0,0,.7);
+}
+.resvideogallery-thumb-title {
+	display: inline-block;
+	max-width: 322px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left !important;
+}
+
+/* video window */
+.resvideogallery-window-thumb { position: relative; }
+.resvideogallery-window-thumb img {
+	width: 333px;
+	height: 198px;
+}
+.resvideogallery-window-thumb-btn {
+	position: absolute;
+	display: none;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	color: #000;
+	opacity: .5;
+	cursor: pointer;
+}
+.resvideogallery-window-thumb-btn:hover { opacity: .8; }
+.resvideogallery-window-thumb:hover .resvideogallery-window-thumb-btn { display: block; }
+.resvideogallery-window-thumb-img {
+
+}
+
+.x-field-search-clear,
+.x-field-search-go {border-left: 1px solid #e4e4e4 !important;}
+.x-field-search-clear:hover,
+.x-field-search-go:hover {border-left-color: transparent !important;}
+
+.x-field-search-clear:before,
+.x-superboxselect-btn-clear:before {content: "\f00d" !important;}
+
+.x-field-search-go,
+.x-superboxselect-btn-expand {right: 31px !important; border-radius: 0 !important;}
+
+.x-field-search-go:before {content: "\f002" !important;}
+.x-superboxselect-btn-expand:before {content: "\f0dc" !important;}
+
+.modx22 .x-form-trigger.x-field-search-clear,
+.modx22 .x-form-trigger.x-superboxselect-btn-clear {
+	position: absolute;
+	background-image: none !important;
+	right: 0;
+	font: normal normal normal 14px/1 FontAwesome !important;
+	text-align: center;
+	padding-top: 8px;
+	height: 22px;
+	border-left: 1px solid #e4e4e4 !important;
+}
+.modx22 .x-form-trigger.x-field-search-go,
+.modx22 .x-form-trigger.x-superboxselect-btn-expand {
+	background-image: none !important;
+	font: normal normal normal 14px/1 FontAwesome !important;
+	text-align: center;
+	padding-top: 8px;
+	height: 22px;
+	border-left: 1px solid #e4e4e4 !important;
+}
+
+.modx22 .x-form-field-trigger-wrap .x-form-text.x-superboxselect,
+.modx22 .x-superboxselect {padding: 0 !important;}
+.modx22 .x-superboxselect ul {padding: 2px 4px 4px 4px !important;}
+.modx22 .x-superboxselect li {margin: 2px 2px 0 0;}
+.modx22 .x-superboxselect-input-field {background-color: transparent;}
+.modx22 .x-superboxselect-input .x-form-empty-field {color: #606060;font-weight: bold;}
+.modx22 .x-superboxselect-btns div {margin: 0 !important;}
+.modx22 .x-superboxselect-btn-hide {display:inline !important;}
+.modx22 .x-form-trigger.x-superboxselect-btn-clear:hover,
+.modx22 .x-form-trigger.x-superboxselect-btn-expand:hover {background-color:#f3f3f3;}
+
+
+/* Actions */
+.action-red {color: darkred !important;}
+.x-btn-over .action-red {color: white !important;}
+
+.action-green {color: darkgreen !important;}
+.x-btn-over .action-green {color: white !important;}
+
+.action-blue {color: cadetblue !important;}
+.x-btn-over .action-blue {color: white !important;}
+
+.action-yellow {color: goldenrod !important;}
+.x-btn-over .action-yellow {color: white !important;}
+
+.action-gray {color: dimgray !important;}
+.x-btn-over .action-gray {color: white !important;}
+
+a.x-menu-item .x-menu-item-text, a.x-menu-item .x-menu-item-text .icon {cursor: pointer;}
+a.x-menu-item .x-menu-item-text .icon,
+a.x-menu-item .x-menu-item-text .fa {line-height: 16px; top: auto;}
+.x-menu-list .icon,
+.x-menu-list .fa {min-width: 1em;text-align: center;}
+.x-menu-list-item:hover .icon {color: inherit !important;}
+
+#resvideogallery-page.drag-over:after {
+	content: "";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	display: block;
+	opacity: 0.1;
+	background: forestgreen;
+	border: 5px solid darkgreen;
+}

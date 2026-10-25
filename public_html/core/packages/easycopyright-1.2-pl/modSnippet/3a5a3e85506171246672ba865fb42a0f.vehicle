@@ -1,0 +1,33 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'easycopyright',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"easycopyright-1.2-pl\\/modSnippet\\/3a5a3e85506171246672ba865fb42a0f\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"easycopyright"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd0866bc349ae24c24c95c183fa2cb92c',
+  'package' => 'modx',
+  'class' => 'modSnippet',
+  'signature' => '3a5a3e85506171246672ba865fb42a0f',
+  'native_key' => 0,
+  'object' => '{"id":0,"source":0,"property_preprocess":0,"name":"EasyCopyright","description":"EasyCopyright is a simple snippet for ModX Revolution that inserts the the current year and the site name.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/*\\n#EasyCopyright#\\n\\n##About##\\n\\n\\n* By Cameron Gilroy\\n* EasyCopyright\\n* Version: 1.1.1\\n* Based in part on Copyright by AMDbuilder\\n* Creator: Cameron Gilroy http:\\/\\/www.camerongilroy.com\\n* Support URL: http:\\/\\/www.camerongilroy.com\\/\\n* GitHub: http:\\/\\/github.com\\/camgill\\/EasyCopyright\\n\\nEasyCopyright is a simple snippet for ModX Revolution that inserts the the current year and the site name. Check the example below.\\n\\n*\\u00a9 +CameronGilroy.com+ 2009-2011 - Powered by +MODx+*\\n\\n###Thanks###\\n\\nA big thank you goes to the creators of MODx Revolution!  \\n[dflock](https:\\/\\/github.com\\/dflock\\/ \\"dflock\\"): Thanks for the new features added to 1.1!\\n\\n###Usage###\\n\\n<code>[[!EasyCopyright]]<\\/code> - Outputs *\\u00a9 [[Your Site name here]] 2011 - Powered by MODx*  \\n<code>[[!EasyCopyright? &StartYear=`2009`]]<\\/code> - Outputs *\\u00a9 [[Your Site name here]] 2009-2011 - Powered by MODx*\\n\\n\\n##Configuration##\\n\\nThe variables that are available are listed below with a description.\\nYou can also call the contents of a chunk into any of these fields like this <code>[[!EasyCopyright? &Powered=`[[$Your_Chunk_Name]]`]]<\\/code>\\n\\n* Name - Your site name\\n* Start Year - What ever you put in!\\n* YearSeparator - is the separator that goes between the Start Year and the current year\\n* PoweredBy - if this is \\"false\\" the \\"Powered by MODx\\" will not show\\n* Powered - is the link to the ModX site\\n* PoweredBySeparator - is the separator that goes between the current Year and Powered by\\n\\n###Defaults###\\n\\n* Name - Your site name\\n* Start Year - No Default must be called in the snippet\\n* Powered - is the link to the ModX site\\n* YearSeparator - \\"-\\"\\n* PoweredBySeparator - \\"-\\"\\n* PoweredBy - \\"true\\"\\n*\\/\\n\\n$Name = isset($Name)? $Name : $modx->getOption(\'name\',$scriptProperties,\'[[++site_name]]\');\\n\\n$PoweredBySeparator = isset($PoweredBySeparator)? $PoweredBySeparator : \\"-\\";\\n$Powered = isset($Powered)? $Powered : \\"Powered by <a href=\'http:\\/\\/www.modxcms.com\'>MODx<\\/a>\\";\\n\\nif ($PoweredBy != \'false\') {\\n\\n\\t$PoweredBy = \\" \\".$PoweredBySeparator.\\" \\".$Powered;\\n\\n} else {\\n\\t$PoweredBy = \\"\\";\\n}\\n\\n$YearSeparator = isset($YearSeparator)? $YearSeparator : \\"-\\";\\n$cYear = date(\\"Y\\");\\n$StartYear = isset($StartYear)? $StartYear : $cYear;\\n$years = ($cYear > $StartYear) ? $StartYear.$YearSeparator.$cYear : $cYear;\\n\\nreturn \\"&copy; $Name $years$PoweredBy\\";","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"\\/*\\n#EasyCopyright#\\n\\n##About##\\n\\n\\n* By Cameron Gilroy\\n* EasyCopyright\\n* Version: 1.1.1\\n* Based in part on Copyright by AMDbuilder\\n* Creator: Cameron Gilroy http:\\/\\/www.camerongilroy.com\\n* Support URL: http:\\/\\/www.camerongilroy.com\\/\\n* GitHub: http:\\/\\/github.com\\/camgill\\/EasyCopyright\\n\\nEasyCopyright is a simple snippet for ModX Revolution that inserts the the current year and the site name. Check the example below.\\n\\n*\\u00a9 +CameronGilroy.com+ 2009-2011 - Powered by +MODx+*\\n\\n###Thanks###\\n\\nA big thank you goes to the creators of MODx Revolution!  \\n[dflock](https:\\/\\/github.com\\/dflock\\/ \\"dflock\\"): Thanks for the new features added to 1.1!\\n\\n###Usage###\\n\\n<code>[[!EasyCopyright]]<\\/code> - Outputs *\\u00a9 [[Your Site name here]] 2011 - Powered by MODx*  \\n<code>[[!EasyCopyright? &StartYear=`2009`]]<\\/code> - Outputs *\\u00a9 [[Your Site name here]] 2009-2011 - Powered by MODx*\\n\\n\\n##Configuration##\\n\\nThe variables that are available are listed below with a description.\\nYou can also call the contents of a chunk into any of these fields like this <code>[[!EasyCopyright? &Powered=`[[$Your_Chunk_Name]]`]]<\\/code>\\n\\n* Name - Your site name\\n* Start Year - What ever you put in!\\n* YearSeparator - is the separator that goes between the Start Year and the current year\\n* PoweredBy - if this is \\"false\\" the \\"Powered by MODx\\" will not show\\n* Powered - is the link to the ModX site\\n* PoweredBySeparator - is the separator that goes between the current Year and Powered by\\n\\n###Defaults###\\n\\n* Name - Your site name\\n* Start Year - No Default must be called in the snippet\\n* Powered - is the link to the ModX site\\n* YearSeparator - \\"-\\"\\n* PoweredBySeparator - \\"-\\"\\n* PoweredBy - \\"true\\"\\n*\\/\\n\\n$Name = isset($Name)? $Name : $modx->getOption(\'name\',$scriptProperties,\'[[++site_name]]\');\\n\\n$PoweredBySeparator = isset($PoweredBySeparator)? $PoweredBySeparator : \\"-\\";\\n$Powered = isset($Powered)? $Powered : \\"Powered by <a href=\'http:\\/\\/www.modxcms.com\'>MODx<\\/a>\\";\\n\\nif ($PoweredBy != \'false\') {\\n\\n\\t$PoweredBy = \\" \\".$PoweredBySeparator.\\" \\".$Powered;\\n\\n} else {\\n\\t$PoweredBy = \\"\\";\\n}\\n\\n$YearSeparator = isset($YearSeparator)? $YearSeparator : \\"-\\";\\n$cYear = date(\\"Y\\");\\n$StartYear = isset($StartYear)? $StartYear : $cYear;\\n$years = ($cYear > $StartYear) ? $StartYear.$YearSeparator.$cYear : $cYear;\\n\\nreturn \\"&copy; $Name $years$PoweredBy\\";"}',
+);

@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'uri',
+  ),
+  'update_object' => false,
+  'namespace' => 'modaccessmanager',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '56dead6bfe1d42c3e1bf81e060133dad',
+  'package' => 'modx',
+  'class' => 'modResource',
+  'signature' => '226cb9eafbe6f86eff2446d7ccc971e4',
+  'native_key' => NULL,
+  'object' => '{"id":null,"type":"document","contentType":"text\\/html","pagetitle":"system","longtitle":"","description":"","alias":"system","link_attributes":"","published":0,"pub_date":0,"unpub_date":0,"parent":0,"isfolder":0,"introtext":null,"content":"","richtext":0,"template":0,"menuindex":0,"searchable":0,"cacheable":0,"createdby":0,"createdon":0,"editedby":0,"editedon":0,"deleted":0,"deletedon":0,"deletedby":0,"publishedon":0,"publishedby":0,"menutitle":"","donthit":0,"privateweb":0,"privatemgr":0,"content_dispo":0,"hidemenu":0,"class_key":"modDocument","context_key":"web","content_type":1,"uri":"system\\/","uri_override":1,"hide_children_in_tree":0,"show_in_tree":1,"properties":null}',
+);

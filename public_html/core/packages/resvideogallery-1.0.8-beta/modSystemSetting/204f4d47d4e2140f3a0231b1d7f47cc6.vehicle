@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_SETTING_UPDATE',
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '97f0c21dc73441157ebb362e7e1e0e1c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '204f4d47d4e2140f3a0231b1d7f47cc6',
+  'native_key' => 'resvideogallery.post_hooks_sort',
+  'object' => '{"key":"resvideogallery.post_hooks_sort","value":"","xtype":"textfield","namespace":"resvideogallery","area":"resvideogallery.resource","editedon":"0000-00-00 00:00:00"}',
+);

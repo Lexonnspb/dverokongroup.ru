@@ -1,0 +1,153 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'bd8b0d68915ddbe9447efac37f4e00ce' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"TVTable","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\nif (!isset($tv)){\\n   return;\\n}\\n\\n$tv = (int)$tv;\\n$classname = isset($classname) ? $classname : \'pricelist\';\\n$did =isset($id) ? $id : $modx->resource->id;\\n\\nif ($tvObject = $modx->getObject(\'modTemplateVarResource\', array(\'tmplvarid\' => $tv, \'contentid\' => $did ))){\\n    $tvv = $tvObject->get(\'value\');\\n}\\n\\nif (!$tvv || $tvv==\'[[\\"\\",\\"\\"],[\\"\\",\\"\\"]]\') return;\\n$tvtArr=json_decode($tvv);\\n\\n$output=\'<table class=\\"\'.$classname.\'\\">\'.\\"\\\\n\\";\\n$output .=\'<tr>\'.\\"\\\\n\\";\\nfor($i=0; $i<count($tvtArr[0]); $i++) $output .=\'<th\'.($i ? \'\' : \' class=\\"first\\"\').\'>\'.$tvtArr[0][$i].\'<\\/th>\'.\\"\\\\n\\";\\n$output.=\'<\\/tr>\'.\\"\\\\n\\";\\nfor($row=1; $row<count($tvtArr); $row++) {\\n\\t$output .=\'<tr\'.(($row%2) ? \'\' : \' class=\\"altrow\\"\').\'>\'.\\"\\\\n\\";\\n\\tfor($i=0; $i<count($tvtArr[$row]); $i++) $output .=\'<td\'.($i ? \'\' : \' class=\\"first\\"\').\'>\'.$tvtArr[$row][$i].\'<\\/td>\'.\\"\\\\n\\";\\n\\t$output.=\'<\\/tr>\'.\\"\\\\n\\";\\n}\\n$output.=\'<\\/table>\';\\nreturn $output;","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"core\\/components\\/tvtable\\/elements\\/snippets\\/snippet.tvtable.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\nif (!isset($tv)){\\n   return;\\n}\\n\\n$tv = (int)$tv;\\n$classname = isset($classname) ? $classname : \'pricelist\';\\n$did =isset($id) ? $id : $modx->resource->id;\\n\\nif ($tvObject = $modx->getObject(\'modTemplateVarResource\', array(\'tmplvarid\' => $tv, \'contentid\' => $did ))){\\n    $tvv = $tvObject->get(\'value\');\\n}\\n\\nif (!$tvv || $tvv==\'[[\\"\\",\\"\\"],[\\"\\",\\"\\"]]\') return;\\n$tvtArr=json_decode($tvv);\\n\\n$output=\'<table class=\\"\'.$classname.\'\\">\'.\\"\\\\n\\";\\n$output .=\'<tr>\'.\\"\\\\n\\";\\nfor($i=0; $i<count($tvtArr[0]); $i++) $output .=\'<th\'.($i ? \'\' : \' class=\\"first\\"\').\'>\'.$tvtArr[0][$i].\'<\\/th>\'.\\"\\\\n\\";\\n$output.=\'<\\/tr>\'.\\"\\\\n\\";\\nfor($row=1; $row<count($tvtArr); $row++) {\\n\\t$output .=\'<tr\'.(($row%2) ? \'\' : \' class=\\"altrow\\"\').\'>\'.\\"\\\\n\\";\\n\\tfor($i=0; $i<count($tvtArr[$row]); $i++) $output .=\'<td\'.($i ? \'\' : \' class=\\"first\\"\').\'>\'.$tvtArr[$row][$i].\'<\\/td>\'.\\"\\\\n\\";\\n\\t$output.=\'<\\/tr>\'.\\"\\\\n\\";\\n}\\n$output.=\'<\\/table>\';\\nreturn $output;"}',
+        'guid' => '10f2b3f249b095791dd8b1416335c5fb',
+        'native_key' => 0,
+        'signature' => 'c3fd694e44d3ccd816f2e76f5d3b939c',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      'ecf5b603719fd76d8dbaebf8a5f74e29' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"TVTable","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\n$corePath = $modx->getOption(\'tvtable.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tvtable\\/\');\\n\\nswitch ($modx->event->name) {\\n\\tcase \'OnTVInputRenderList\':\\n\\t\\t$modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\n\\t\\tbreak;\\n\\tcase \'OnTVInputPropertiesList\':\\n\\t\\t$modx->event->output($corePath . \'elements\\/tv\\/inputoptions\\/\');\\n\\t\\tbreak;\\n\\tcase \'OnDocFormPrerender\':\\n\\t\\t$modx->regClientStartupScript(\'\\/\\/code.jquery.com\\/jquery-1.11.2.min.js\');\\n\\t\\tbreak;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/tvtable\\/elements\\/plugins\\/plugin.tvtable.php","content":"\\/** @var modX $modx *\\/\\n$corePath = $modx->getOption(\'tvtable.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tvtable\\/\');\\n\\nswitch ($modx->event->name) {\\n\\tcase \'OnTVInputRenderList\':\\n\\t\\t$modx->event->output($corePath . \'elements\\/tv\\/input\\/\');\\n\\t\\tbreak;\\n\\tcase \'OnTVInputPropertiesList\':\\n\\t\\t$modx->event->output($corePath . \'elements\\/tv\\/inputoptions\\/\');\\n\\t\\tbreak;\\n\\tcase \'OnDocFormPrerender\':\\n\\t\\t$modx->regClientStartupScript(\'\\/\\/code.jquery.com\\/jquery-1.11.2.min.js\');\\n\\t\\tbreak;\\n}"}',
+        'guid' => 'bda8e8b3065fedcee198a8c4d7c0ad85',
+        'native_key' => NULL,
+        'signature' => '23d2468bbd8036ebf8d7e2cbf3d58c5f',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '503f738f4c021778bce22759a0eed3b7' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+              'guid' => 'c7b830e03191e072b5c91de8700dbddc',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputRenderList',
+              ),
+              'signature' => 'fb84321fd2231b14012afddd6c9f4fd1',
+            ),
+            '11f465f510100521ae67ac080a2ceb2f' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+              'guid' => 'a75f73e2d565c6e16fb3f57da6e3ea35',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTVInputPropertiesList',
+              ),
+              'signature' => '05529ad1fb9628d6befeaaad8476ef7e',
+            ),
+            'e5065a6f8f1d8495de7cf6b1bda79c54' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '11b7e64b7bf99734ef8254d08a2eb21e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => '06d6ef735922abcddfcd0c7b84dc2bdf',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'tvtable',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tvtable-1.0.3-beta\\/modCategory\\/8e8f741c1a04f6398649f36c43b13be3\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"tvtable"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tvtable-1.0.3-beta\\/modCategory\\/8e8f741c1a04f6398649f36c43b13be3\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tvtable"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e249fe15e85dd42ba71d82331fb09248',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '8e8f741c1a04f6398649f36c43b13be3',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"TVTable","rank":0}',
+);

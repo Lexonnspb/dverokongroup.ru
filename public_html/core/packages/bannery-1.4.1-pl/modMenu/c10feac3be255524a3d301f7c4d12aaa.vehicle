@@ -1,0 +1,30 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'bannery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '639327cd52a422e807694e03cbe41fed',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'c10feac3be255524a3d301f7c4d12aaa',
+  'native_key' => 'BannerY',
+  'object' => '{"text":"BannerY","parent":"components","action":"home","description":"bannery.desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"bannery"}',
+);

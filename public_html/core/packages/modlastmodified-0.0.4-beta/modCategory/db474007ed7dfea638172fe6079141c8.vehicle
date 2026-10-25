@@ -1,0 +1,130 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '4906c49cdfee177e36edf3b4924f0d2d' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"modLastModified","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch ($modx->event->name) {\\n\\n\\tcase \'OnManagerPageInit\':\\n\\t\\t$cssFile = MODX_ASSETS_URL.\'components\\/modlastmodified\\/css\\/mgr\\/main.css\';\\n\\t\\t$modx->regClientCSS($cssFile);\\n\\t\\tbreak;\\n        \\n    case \'OnWebPagePrerender\':\\n        $modified = date(\\"r\\", strtotime($modx->resource->get(\'editedon\')));\\n        header (\\"Last-Modified: $modified\\");\\n        \\n        $modx->resource->_contextKey = $modx->resource->context_key;\\n        $cache = $modx->cacheManager->getCacheProvider($modx->getOption(\'cache_resource_key\', null, \'resource\'));\\n        $key = $modx->resource->getCacheKey();\\n        if ($cache->get($key)) {\\n            $qtime = isset($_SERVER[\'HTTP_IF_MODIFIED_SINCE\']) ? $_SERVER[\'HTTP_IF_MODIFIED_SINCE\'] : \'\';\\n            if (strtotime($qtime) >= strtotime($modified)) {\\n                header (\\"HTTP\\/1.1 304 Not Modified \\");\\n                header(\\"Expires: \\" . date(\\"r\\", time() + 3600));\\n                exit();\\n            }\\n        }\\n        header(\\"Expires: \\" . date(\\"r\\", time() + 3600));\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/modlastmodified\\/elements\\/plugins\\/plugin.modlastmodified.php","content":"switch ($modx->event->name) {\\n\\n\\tcase \'OnManagerPageInit\':\\n\\t\\t$cssFile = MODX_ASSETS_URL.\'components\\/modlastmodified\\/css\\/mgr\\/main.css\';\\n\\t\\t$modx->regClientCSS($cssFile);\\n\\t\\tbreak;\\n        \\n    case \'OnWebPagePrerender\':\\n        $modified = date(\\"r\\", strtotime($modx->resource->get(\'editedon\')));\\n        header (\\"Last-Modified: $modified\\");\\n        \\n        $modx->resource->_contextKey = $modx->resource->context_key;\\n        $cache = $modx->cacheManager->getCacheProvider($modx->getOption(\'cache_resource_key\', null, \'resource\'));\\n        $key = $modx->resource->getCacheKey();\\n        if ($cache->get($key)) {\\n            $qtime = isset($_SERVER[\'HTTP_IF_MODIFIED_SINCE\']) ? $_SERVER[\'HTTP_IF_MODIFIED_SINCE\'] : \'\';\\n            if (strtotime($qtime) >= strtotime($modified)) {\\n                header (\\"HTTP\\/1.1 304 Not Modified \\");\\n                header(\\"Expires: \\" . date(\\"r\\", time() + 3600));\\n                exit();\\n            }\\n        }\\n        header(\\"Expires: \\" . date(\\"r\\", time() + 3600));\\n        break;\\n}"}',
+        'guid' => 'db90f2e2777acdff12329d09d2368c11',
+        'native_key' => NULL,
+        'signature' => 'c45d238c8c3ad0b57019151a4fddaf48',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'ecb6a7ca762c89bc458f26a643022049' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageInit","priority":0,"propertyset":0}',
+              'guid' => '0eec7cbc13c3726ae9ac3788705cdaee',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageInit',
+              ),
+              'signature' => 'b0171326651b699c286664205e4c940e',
+            ),
+            '8321dd4d52f337b242a93fd9c242681f' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPagePrerender","priority":0,"propertyset":0}',
+              'guid' => '46b80b8b7f675039fb85be3a6389d921',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPagePrerender',
+              ),
+              'signature' => '2ab49e8d4168668640ed79d96f4a466e',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'modlastmodified',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modlastmodified-0.0.4-beta\\/modCategory\\/db474007ed7dfea638172fe6079141c8\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"modlastmodified"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modlastmodified-0.0.4-beta\\/modCategory\\/db474007ed7dfea638172fe6079141c8\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"modlastmodified"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modlastmodified-0.0.4-beta\\/modCategory\\/db474007ed7dfea638172fe6079141c8.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modlastmodified-0.0.4-beta\\/modCategory\\/db474007ed7dfea638172fe6079141c8.resolve.chunks.resolver","type":"php","name":"resolve.chunks"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e47bde002d5de32b15429bf1d81dbbeb',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'db474007ed7dfea638172fe6079141c8',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"modLastModified"}',
+);

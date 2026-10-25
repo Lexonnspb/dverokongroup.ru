@@ -1,0 +1,59 @@
+// Pagination
+
+.rvg-pagination {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0 4px;
+  }
+  a {
+    display: inline-block;
+    padding: $pagenav-padding;
+    border: 1px solid transparent;
+    line-height: 16px;
+    font-size: $pagenav-font-size;
+    vertical-align: middle;
+    ountline: none;
+    cursor: pointer;
+    white-space: normal;
+    border-radius: $pagenav-radius;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    user-select: none;
+
+    background: $pagenav-bg;
+    border-color: $pagenav-border-color;
+    color: $pagenav-color;
+    box-shadow: $pagenav-box-shadow;
+    text-shadow: $pagenav-text-shadow;
+
+    &:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      background: $pagenav-bg-hover;
+      border-color: $pagenav-border-color-hover;
+      color: $pagenav-color-hover;
+      box-shadow: $pagenav-box-shadow-hover;
+      text-shadow: $pagenav-text-shadow-hover;
+
+    }
+    &:active,
+    &.active {
+      outline: 0;
+
+      background: $pagenav-bg-active;
+      border-color: $pagenav-border-color-active;
+      color: $pagenav-color-active;
+      box-shadow: $pagenav-box-shadow-active;
+      text-shadow: $pagenav-text-shadow-active;
+    }
+  }
+}

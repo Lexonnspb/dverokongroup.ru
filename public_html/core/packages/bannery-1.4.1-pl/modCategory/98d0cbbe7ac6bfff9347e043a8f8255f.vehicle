@@ -1,0 +1,139 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '914561c8a79f26e077b526ec13c72433' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => false,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"byAd","description":"BannerY Ad","editor_type":0,"category":0,"cache_type":0,"snippet":"<p><a href=\\"[[++bannery_click]]\\/[[+adposition]]\\"><img src=\\"[[+image]]\\" alt=\\"[[+name]]\\" title=\\"[[+description]]\\"\\/><\\/a><\\/p>\\n<p>Banner with extra params (available as placeholders in banner URL):<br \\/>\\n<a href=\\"[[++bannery_click]]\\/[[+adposition]]?id=[[*id]]&amp;something=123\\"><img src=\\"[[+image]]\\" alt=\\"[[+name]]\\" \\/><\\/a><\\/p>\\n","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/bannery\\/elements\\/chunks\\/chunk.byad.tpl","content":"<p><a href=\\"[[++bannery_click]]\\/[[+adposition]]\\"><img src=\\"[[+image]]\\" alt=\\"[[+name]]\\" title=\\"[[+description]]\\"\\/><\\/a><\\/p>\\n<p>Banner with extra params (available as placeholders in banner URL):<br \\/>\\n<a href=\\"[[++bannery_click]]\\/[[+adposition]]?id=[[*id]]&amp;something=123\\"><img src=\\"[[+image]]\\" alt=\\"[[+name]]\\" \\/><\\/a><\\/p>\\n"}',
+        'guid' => 'd8c61359e5d409922cffa00a2664156c',
+        'native_key' => 0,
+        'signature' => 'b66b09b3810ecee1367db3ad7e5c5360',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '0626a52025055ef7ff0a4af60bbef110' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"BannerY","description":"Show ads on your site","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var array $scriptProperties *\\/\\n\\/* @var pdoFetch $pdoFetch *\\/\\nif (!$modx->getService(\'pdoFetch\')) {return \'You need to install pdoTools to use this snippet!\';}\\n$pdoFetch = new pdoFetch($modx, $scriptProperties);\\n$pdoFetch->addTime(\'pdoTools loaded\');\\n$modx->lexicon->load(\'bannery:default\');\\n$modx->addPackage(\'bannery\', MODX_CORE_PATH . \'components\\/bannery\\/model\\/\');\\n\\nif (!empty($tplOuter)) {$tplWrapper = $tplOuter;}\\nif (empty($outputSeparator)) {$outputSeparator = \\"\\\\n\\";}\\n$class = \'byAd\';\\n\\n\\/\\/ Adding extra parameters into special place so we can put them in results\\n\\/** @var modSnippet $snippet *\\/\\n$additionalPlaceholders = array();\\nif ($snippet = $modx->getObject(\'modSnippet\', array(\'name\' => \'BannerY\'))) {\\n\\t$properties = unserialize($snippet->properties);\\n\\tforeach ($scriptProperties as $k => $v) {\\n\\t\\tif (!isset($properties[$k])) {\\n\\t\\t\\t$additionalPlaceholders[$k] = $v;\\n\\t\\t}\\n\\t}\\n}\\n\\/\\/ ---\\n\\n$date = date(\'Y-m-d H:i:s\');\\n$where = array(\\n\\t\\"({$class}.start IS NULL OR {$class}.start <= \'{$date}\') AND ({$class}.end IS NULL OR {$class}.end >= \'{$date}\')\\"\\n);\\nif (empty($showInactive)) {\\n\\t$where[$class.\'.active\'] = 1;\\n}\\nif (!empty($position)) {\\n\\t$where[\'byAdPosition.position\'] = $position;\\n}\\nelseif (!empty($positions)) {\\n\\t$where[\'byAdPosition.position:IN\'] = array_map(\'trim\', explode(\',\', $positions));\\n}\\n\\nif (empty($sortby)) {\\n\\t$sortby = \'RAND()\';\\n}\\nelseif ($sortby == \'idx\' || $sortby == \'index\') {\\n\\t$sortby = \'byAdPosition.idx\';\\n}\\nelse {\\n\\t$sortby = $class.\'.\'.$sortby;\\n}\\n\\n$innerJoin = array(\\n\\t\'byAdPosition\' => array(\\n\\t\\t\'alias\' => \'byAdPosition\',\\n\\t\\t\'on\' => $class.\'.id = byAdPosition.ad\'\\n\\t)\\n);\\n\\n\\/\\/ Fields to select\\n$select = array(\\n\\t$class => \'all\',\\n\\t\'byAdPosition\' => \'`byAdPosition`.`id` as `adposition`, `byAdPosition`.`ad`\'\\n);\\n\\n\\/\\/ Add custom parameters\\nforeach (array(\'where\',\'innerJoin\',\'select\') as $v) {\\n\\tif (!empty($scriptProperties[$v])) {\\n\\t\\t$tmp = $modx->fromJSON($scriptProperties[$v]);\\n\\t\\tif (is_array($tmp)) {\\n\\t\\t\\t$$v = array_merge($$v, $tmp);\\n\\t\\t}\\n\\t}\\n\\tunset($scriptProperties[$v]);\\n}\\n$pdoFetch->addTime(\'Conditions prepared\');\\n\\n$default = array(\\n\\t\'class\' => $class,\\n\\t\'innerJoin\' => $modx->toJSON($innerJoin),\\n\\t\'where\' => $modx->toJSON($where),\\n\\t\'select\' => $modx->toJSON($select),\\n\\t\'sortby\' => $sortby,\\n\\t\'return\' => \'data\',\\n\\t\'disableConditions\' => true,\\n);\\n\\n$pdoFetch->setConfig(array_merge($default, $scriptProperties));\\n$rows = $pdoFetch->run();\\n\\n$output = array();\\n$default_source = $modx->getOption(\'bannery_media_source\', null, $modx->getOption(\'default_media_source\'), true);\\n$sources = array();\\nforeach ($rows as $row) {\\n\\t$source = !empty($row[\'source\'])\\n\\t\\t? $row[\'source\']\\n\\t\\t: $default_source;\\n\\n\\tif (!isset($sources[$row[\'source\']])) {\\n\\t\\t\\/** @var modMediaSource $source *\\/\\n\\t\\tif ($source = $modx->getObject(\'sources.modMediaSource\', $source)) {\\n\\t\\t\\t$source->initialize($modx->context->key);\\n\\t\\t}\\n\\t\\t$sources[$row[\'source\']] = $source;\\n\\t}\\n\\telse {\\n\\t\\t$source = $sources[$row[\'source\']];\\n\\t}\\n\\n\\tif (!empty($source) && $source instanceof modMediaSource && !empty($row[\'image\'])) {\\n\\t\\t$row[\'image\'] = $source->getObjectUrl($row[\'image\']);\\n\\t}\\n\\n\\t$row[\'idx\'] = $pdoFetch->idx++;\\n\\t$tpl = $pdoFetch->defineChunk($row);\\n\\tif (!empty($additionalPlaceholders)) {\\n\\t\\t$row = array_merge($additionalPlaceholders, $row);\\n\\t}\\n\\n\\t$output[] = !empty($tpl)\\n\\t\\t? $pdoFetch->getChunk($tpl, $row, $pdoFetch->config[\'fastMode\'])\\n\\t\\t: \'<pre>\'.$pdoFetch->getChunk(\'\', $row).\'<\\/pre>\';\\n}\\n\\nif ($modx->user->hasSessionContext(\'mgr\') && !empty($showLog)) {\\n\\t$output[\'log\'] = \'<pre class=\\"pdoUsersLog\\">\' . print_r($pdoFetch->getTime(), 1) . \'<\\/pre>\';\\n}\\n\\n\\/\\/ Return output\\nif (!empty($toSeparatePlaceholders)) {\\n\\t$modx->setPlaceholders($output, $toSeparatePlaceholders);\\n}\\nelse {\\n\\t$output = implode($outputSeparator, $output);\\n\\n\\tif (!empty($tplWrapper) && (!empty($wrapIfEmpty) || !empty($output))) {\\n\\t\\t$output = $pdoFetch->getChunk($tplWrapper, array(\'output\' => $output), $pdoFetch->config[\'fastMode\']);\\n\\t}\\n\\n\\tif (!empty($toPlaceholder)) {\\n\\t\\t$modx->setPlaceholder($toPlaceholder, $output);\\n\\t}\\n\\telse {\\n\\t\\treturn $output;\\n\\t}\\n}","locked":0,"properties":"a:18:{s:9:\\"positions\\";a:7:{s:4:\\"name\\";s:9:\\"positions\\";s:4:\\"desc\\";s:22:\\"bannery_prop_positions\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"showLog\\";a:7:{s:4:\\"name\\";s:7:\\"showLog\\";s:4:\\"desc\\";s:20:\\"bannery_prop_showLog\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"fastMode\\";a:7:{s:4:\\"name\\";s:8:\\"fastMode\\";s:4:\\"desc\\";s:21:\\"bannery_prop_fastMode\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"limit\\";a:7:{s:4:\\"name\\";s:5:\\"limit\\";s:4:\\"desc\\";s:18:\\"bannery_prop_limit\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:5;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"offset\\";a:7:{s:4:\\"name\\";s:6:\\"offset\\";s:4:\\"desc\\";s:19:\\"bannery_prop_offset\\";s:4:\\"type\\";s:11:\\"numberfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";i:0;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"sortby\\";a:7:{s:4:\\"name\\";s:6:\\"sortby\\";s:4:\\"desc\\";s:19:\\"bannery_prop_sortby\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:7:{i:0;a:2:{s:4:\\"text\\";s:6:\\"Random\\";s:5:\\"value\\";s:6:\\"RAND()\\";}i:1;a:2:{s:4:\\"text\\";s:5:\\"Index\\";s:5:\\"value\\";s:3:\\"idx\\";}i:2;a:2:{s:4:\\"text\\";s:4:\\"Name\\";s:5:\\"value\\";s:4:\\"name\\";}i:3;a:2:{s:4:\\"text\\";s:3:\\"Url\\";s:5:\\"value\\";s:3:\\"url\\";}i:4;a:2:{s:4:\\"text\\";s:5:\\"Image\\";s:5:\\"value\\";s:5:\\"image\\";}i:5;a:2:{s:4:\\"text\\";s:6:\\"Active\\";s:5:\\"value\\";s:6:\\"active\\";}i:6;a:2:{s:4:\\"text\\";s:11:\\"Description\\";s:5:\\"value\\";s:11:\\"description\\";}}s:5:\\"value\\";s:6:\\"RAND()\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"sortdir\\";a:7:{s:4:\\"name\\";s:7:\\"sortdir\\";s:4:\\"desc\\";s:20:\\"bannery_prop_sortdir\\";s:4:\\"type\\";s:4:\\"list\\";s:7:\\"options\\";a:2:{i:0;a:2:{s:4:\\"text\\";s:3:\\"ASC\\";s:5:\\"value\\";s:3:\\"ASC\\";}i:1;a:2:{s:4:\\"text\\";s:4:\\"DESC\\";s:5:\\"value\\";s:4:\\"DESC\\";}}s:5:\\"value\\";s:3:\\"ASC\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:15:\\"outputSeparator\\";a:7:{s:4:\\"name\\";s:15:\\"outputSeparator\\";s:4:\\"desc\\";s:28:\\"bannery_prop_outputSeparator\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:1:\\"\\n\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:5:\\"where\\";a:7:{s:4:\\"name\\";s:5:\\"where\\";s:4:\\"desc\\";s:18:\\"bannery_prop_where\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:12:\\"showInactive\\";a:7:{s:4:\\"name\\";s:12:\\"showInactive\\";s:4:\\"desc\\";s:25:\\"bannery_prop_showInactive\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:16:\\"bannery_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:4:\\"byAd\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:8:\\"tplFirst\\";a:7:{s:4:\\"name\\";s:8:\\"tplFirst\\";s:4:\\"desc\\";s:21:\\"bannery_prop_tplFirst\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"tplLast\\";a:7:{s:4:\\"name\\";s:7:\\"tplLast\\";s:4:\\"desc\\";s:20:\\"bannery_prop_tplLast\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:6:\\"tplOdd\\";a:7:{s:4:\\"name\\";s:6:\\"tplOdd\\";s:4:\\"desc\\";s:19:\\"bannery_prop_tplOdd\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:10:\\"tplWrapper\\";a:7:{s:4:\\"name\\";s:10:\\"tplWrapper\\";s:4:\\"desc\\";s:23:\\"bannery_prop_tplWrapper\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:11:\\"wrapIfEmpty\\";a:7:{s:4:\\"name\\";s:11:\\"wrapIfEmpty\\";s:4:\\"desc\\";s:24:\\"bannery_prop_wrapIfEmpty\\";s:4:\\"type\\";s:13:\\"combo-boolean\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";b:0;s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:13:\\"toPlaceholder\\";a:7:{s:4:\\"name\\";s:13:\\"toPlaceholder\\";s:4:\\"desc\\";s:26:\\"bannery_prop_toPlaceholder\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:22:\\"toSeparatePlaceholders\\";a:7:{s:4:\\"name\\";s:22:\\"toSeparatePlaceholders\\";s:4:\\"desc\\";s:35:\\"bannery_prop_toSeparatePlaceholders\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:0:\\"\\";s:7:\\"lexicon\\";s:18:\\"bannery:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/bannery\\/elements\\/snippets\\/snippet.bannery.php","content":"\\/** @var array $scriptProperties *\\/\\n\\/* @var pdoFetch $pdoFetch *\\/\\nif (!$modx->getService(\'pdoFetch\')) {return \'You need to install pdoTools to use this snippet!\';}\\n$pdoFetch = new pdoFetch($modx, $scriptProperties);\\n$pdoFetch->addTime(\'pdoTools loaded\');\\n$modx->lexicon->load(\'bannery:default\');\\n$modx->addPackage(\'bannery\', MODX_CORE_PATH . \'components\\/bannery\\/model\\/\');\\n\\nif (!empty($tplOuter)) {$tplWrapper = $tplOuter;}\\nif (empty($outputSeparator)) {$outputSeparator = \\"\\\\n\\";}\\n$class = \'byAd\';\\n\\n\\/\\/ Adding extra parameters into special place so we can put them in results\\n\\/** @var modSnippet $snippet *\\/\\n$additionalPlaceholders = array();\\nif ($snippet = $modx->getObject(\'modSnippet\', array(\'name\' => \'BannerY\'))) {\\n\\t$properties = unserialize($snippet->properties);\\n\\tforeach ($scriptProperties as $k => $v) {\\n\\t\\tif (!isset($properties[$k])) {\\n\\t\\t\\t$additionalPlaceholders[$k] = $v;\\n\\t\\t}\\n\\t}\\n}\\n\\/\\/ ---\\n\\n$date = date(\'Y-m-d H:i:s\');\\n$where = array(\\n\\t\\"({$class}.start IS NULL OR {$class}.start <= \'{$date}\') AND ({$class}.end IS NULL OR {$class}.end >= \'{$date}\')\\"\\n);\\nif (empty($showInactive)) {\\n\\t$where[$class.\'.active\'] = 1;\\n}\\nif (!empty($position)) {\\n\\t$where[\'byAdPosition.position\'] = $position;\\n}\\nelseif (!empty($positions)) {\\n\\t$where[\'byAdPosition.position:IN\'] = array_map(\'trim\', explode(\',\', $positions));\\n}\\n\\nif (empty($sortby)) {\\n\\t$sortby = \'RAND()\';\\n}\\nelseif ($sortby == \'idx\' || $sortby == \'index\') {\\n\\t$sortby = \'byAdPosition.idx\';\\n}\\nelse {\\n\\t$sortby = $class.\'.\'.$sortby;\\n}\\n\\n$innerJoin = array(\\n\\t\'byAdPosition\' => array(\\n\\t\\t\'alias\' => \'byAdPosition\',\\n\\t\\t\'on\' => $class.\'.id = byAdPosition.ad\'\\n\\t)\\n);\\n\\n\\/\\/ Fields to select\\n$select = array(\\n\\t$class => \'all\',\\n\\t\'byAdPosition\' => \'`byAdPosition`.`id` as `adposition`, `byAdPosition`.`ad`\'\\n);\\n\\n\\/\\/ Add custom parameters\\nforeach (array(\'where\',\'innerJoin\',\'select\') as $v) {\\n\\tif (!empty($scriptProperties[$v])) {\\n\\t\\t$tmp = $modx->fromJSON($scriptProperties[$v]);\\n\\t\\tif (is_array($tmp)) {\\n\\t\\t\\t$$v = array_merge($$v, $tmp);\\n\\t\\t}\\n\\t}\\n\\tunset($scriptProperties[$v]);\\n}\\n$pdoFetch->addTime(\'Conditions prepared\');\\n\\n$default = array(\\n\\t\'class\' => $class,\\n\\t\'innerJoin\' => $modx->toJSON($innerJoin),\\n\\t\'where\' => $modx->toJSON($where),\\n\\t\'select\' => $modx->toJSON($select),\\n\\t\'sortby\' => $sortby,\\n\\t\'return\' => \'data\',\\n\\t\'disableConditions\' => true,\\n);\\n\\n$pdoFetch->setConfig(array_merge($default, $scriptProperties));\\n$rows = $pdoFetch->run();\\n\\n$output = array();\\n$default_source = $modx->getOption(\'bannery_media_source\', null, $modx->getOption(\'default_media_source\'), true);\\n$sources = array();\\nforeach ($rows as $row) {\\n\\t$source = !empty($row[\'source\'])\\n\\t\\t? $row[\'source\']\\n\\t\\t: $default_source;\\n\\n\\tif (!isset($sources[$row[\'source\']])) {\\n\\t\\t\\/** @var modMediaSource $source *\\/\\n\\t\\tif ($source = $modx->getObject(\'sources.modMediaSource\', $source)) {\\n\\t\\t\\t$source->initialize($modx->context->key);\\n\\t\\t}\\n\\t\\t$sources[$row[\'source\']] = $source;\\n\\t}\\n\\telse {\\n\\t\\t$source = $sources[$row[\'source\']];\\n\\t}\\n\\n\\tif (!empty($source) && $source instanceof modMediaSource && !empty($row[\'image\'])) {\\n\\t\\t$row[\'image\'] = $source->getObjectUrl($row[\'image\']);\\n\\t}\\n\\n\\t$row[\'idx\'] = $pdoFetch->idx++;\\n\\t$tpl = $pdoFetch->defineChunk($row);\\n\\tif (!empty($additionalPlaceholders)) {\\n\\t\\t$row = array_merge($additionalPlaceholders, $row);\\n\\t}\\n\\n\\t$output[] = !empty($tpl)\\n\\t\\t? $pdoFetch->getChunk($tpl, $row, $pdoFetch->config[\'fastMode\'])\\n\\t\\t: \'<pre>\'.$pdoFetch->getChunk(\'\', $row).\'<\\/pre>\';\\n}\\n\\nif ($modx->user->hasSessionContext(\'mgr\') && !empty($showLog)) {\\n\\t$output[\'log\'] = \'<pre class=\\"pdoUsersLog\\">\' . print_r($pdoFetch->getTime(), 1) . \'<\\/pre>\';\\n}\\n\\n\\/\\/ Return output\\nif (!empty($toSeparatePlaceholders)) {\\n\\t$modx->setPlaceholders($output, $toSeparatePlaceholders);\\n}\\nelse {\\n\\t$output = implode($outputSeparator, $output);\\n\\n\\tif (!empty($tplWrapper) && (!empty($wrapIfEmpty) || !empty($output))) {\\n\\t\\t$output = $pdoFetch->getChunk($tplWrapper, array(\'output\' => $output), $pdoFetch->config[\'fastMode\']);\\n\\t}\\n\\n\\tif (!empty($toPlaceholder)) {\\n\\t\\t$modx->setPlaceholder($toPlaceholder, $output);\\n\\t}\\n\\telse {\\n\\t\\treturn $output;\\n\\t}\\n}"}',
+        'guid' => 'bfe32a516e44761332ad5b795215a14b',
+        'native_key' => 0,
+        'signature' => '0e2e5a472fcb21261ccbb2a53b9b8c50',
+      ),
+    ),
+    'Plugins' => 
+    array (
+      'b3ba986d313661df55e3e131c579b40c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"BannerYClickout","description":"Handle ad clicks","editor_type":0,"category":0,"cache_type":0,"plugincode":"if ($modx->event->name == \'OnPageNotFound\') {\\n\\t$bannery_click = $modx->getOption(\'bannery_click\', null, \'bannerclick\', true);\\n\\tif (preg_match(\'\\/\'.$bannery_click.\'\\\\\\/([0-9]+)\\/\', $_SERVER[\'REQUEST_URI\'], $matches)) {\\n\\t\\t$modx->addPackage(\'bannery\', $modx->getOption(\'core_path\') . \'components\\/bannery\\/model\\/\');\\n\\n\\t\\t$id = $matches[1];\\n\\t\\t$c = $modx->newQuery(\'byAd\');\\n\\t\\t$c->select(\'`byAd`.`id`, `Position`.`position`, `byAd`.`url`\');\\n\\t\\t$c->leftJoin(\'byAdPosition\', \'Position\', \'Position.ad = byAd.id\');\\n\\t\\t$c->where(array(\'Position.id\' => $id));\\n\\t\\tif ($ad = $modx->getObject(\'byAd\', $c)) {\\n\\t\\t\\t$key = array(\\n\\t\\t\\t\\t\'ad\' => $ad->get(\'id\'),\\n\\t\\t\\t\\t\'position\' => $ad->get(\'position\'),\\n\\t\\t\\t\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\'],\\n\\t\\t\\t\\t\'clickdate:LIKE\' => date(\'Y-m-d\') . \'%\'\\n\\t\\t\\t);\\n\\t\\t\\tif (!$modx->getCount(\'byClick\', $key)) {\\n\\t\\t\\t\\t$click = $modx->newObject(\'byClick\', array(\\n\\t\\t\\t\\t\\t\'ad\' => $ad->get(\'id\'),\\n\\t\\t\\t\\t\\t\'position\' => $ad->get(\'position\'),\\n\\t\\t\\t\\t\\t\'clickdate\' => date(\'Y-m-d H:i:s\'),\\n\\t\\t\\t\\t\\t\'referrer\' => $_SERVER[\'HTTP_REFERER\'],\\n\\t\\t\\t\\t\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\']\\n\\t\\t\\t\\t));\\n\\t\\t\\t\\t$click->save();\\n\\t\\t\\t}\\n\\t\\t\\t$url = $ad->get(\'url\');\\n\\t\\t\\t$chunk = $modx->newObject(\'modChunk\');\\n\\t\\t\\t$chunk->set(\'name\', \'banneryPosition\' . $id);\\n\\t\\t\\t$chunk->setContent($url);\\n\\t\\t\\t$url = $chunk->process($_GET);\\n\\n\\t\\t\\t$modx->sendRedirect($url);\\n\\t\\t}\\n\\t}\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/bannery\\/elements\\/plugins\\/plugin.banneryclickout.php","content":"if ($modx->event->name == \'OnPageNotFound\') {\\n\\t$bannery_click = $modx->getOption(\'bannery_click\', null, \'bannerclick\', true);\\n\\tif (preg_match(\'\\/\'.$bannery_click.\'\\\\\\/([0-9]+)\\/\', $_SERVER[\'REQUEST_URI\'], $matches)) {\\n\\t\\t$modx->addPackage(\'bannery\', $modx->getOption(\'core_path\') . \'components\\/bannery\\/model\\/\');\\n\\n\\t\\t$id = $matches[1];\\n\\t\\t$c = $modx->newQuery(\'byAd\');\\n\\t\\t$c->select(\'`byAd`.`id`, `Position`.`position`, `byAd`.`url`\');\\n\\t\\t$c->leftJoin(\'byAdPosition\', \'Position\', \'Position.ad = byAd.id\');\\n\\t\\t$c->where(array(\'Position.id\' => $id));\\n\\t\\tif ($ad = $modx->getObject(\'byAd\', $c)) {\\n\\t\\t\\t$key = array(\\n\\t\\t\\t\\t\'ad\' => $ad->get(\'id\'),\\n\\t\\t\\t\\t\'position\' => $ad->get(\'position\'),\\n\\t\\t\\t\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\'],\\n\\t\\t\\t\\t\'clickdate:LIKE\' => date(\'Y-m-d\') . \'%\'\\n\\t\\t\\t);\\n\\t\\t\\tif (!$modx->getCount(\'byClick\', $key)) {\\n\\t\\t\\t\\t$click = $modx->newObject(\'byClick\', array(\\n\\t\\t\\t\\t\\t\'ad\' => $ad->get(\'id\'),\\n\\t\\t\\t\\t\\t\'position\' => $ad->get(\'position\'),\\n\\t\\t\\t\\t\\t\'clickdate\' => date(\'Y-m-d H:i:s\'),\\n\\t\\t\\t\\t\\t\'referrer\' => $_SERVER[\'HTTP_REFERER\'],\\n\\t\\t\\t\\t\\t\'ip\' => $_SERVER[\'REMOTE_ADDR\']\\n\\t\\t\\t\\t));\\n\\t\\t\\t\\t$click->save();\\n\\t\\t\\t}\\n\\t\\t\\t$url = $ad->get(\'url\');\\n\\t\\t\\t$chunk = $modx->newObject(\'modChunk\');\\n\\t\\t\\t$chunk->set(\'name\', \'banneryPosition\' . $id);\\n\\t\\t\\t$chunk->setContent($url);\\n\\t\\t\\t$url = $chunk->process($_GET);\\n\\n\\t\\t\\t$modx->sendRedirect($url);\\n\\t\\t}\\n\\t}\\n}"}',
+        'guid' => '68f36d80782475200e979ab33b2063d5',
+        'native_key' => NULL,
+        'signature' => 'd997abb5c8d1b73776b8233489200ebd',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'd3edde2fed7bdb10ab8a2fb1d8d27a7b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPageNotFound","priority":0,"propertyset":0}',
+              'guid' => 'c59375254dd83c2a28455068a7437693',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPageNotFound',
+              ),
+              'signature' => 'b3185a822704fa4c7d0f0191cacb89c5',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'bannery',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"bannery-1.4.1-pl\\/modCategory\\/98d0cbbe7ac6bfff9347e043a8f8255f\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"bannery"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"bannery-1.4.1-pl\\/modCategory\\/98d0cbbe7ac6bfff9347e043a8f8255f\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"bannery"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"bannery-1.4.1-pl\\/modCategory\\/98d0cbbe7ac6bfff9347e043a8f8255f.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"bannery-1.4.1-pl\\/modCategory\\/98d0cbbe7ac6bfff9347e043a8f8255f.resolve.update.resolver","type":"php","name":"resolve.update"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '220be161679472badfe34d01ca4f86ff',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '98d0cbbe7ac6bfff9347e043a8f8255f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"BannerY","rank":0}',
+);

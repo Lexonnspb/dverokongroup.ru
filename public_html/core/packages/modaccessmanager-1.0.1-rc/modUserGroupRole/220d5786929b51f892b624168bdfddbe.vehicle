@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'modaccessmanager',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e79aeae0f9e41c93e4ca428fa9d046e4',
+  'package' => 'modx',
+  'class' => 'modUserGroupRole',
+  'signature' => '220d5786929b51f892b624168bdfddbe',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"Manager","description":"for the manager","authority":9}',
+);

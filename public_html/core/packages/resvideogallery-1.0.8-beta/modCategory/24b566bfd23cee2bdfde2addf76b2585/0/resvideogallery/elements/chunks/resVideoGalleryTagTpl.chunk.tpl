@@ -1,0 +1,1 @@
+<a href="#" class="rvg-tag js-rvg-tag[[+active:is=`1`:then=` rvg-tag-active`]]" >[[+tag]]</a>

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'modrelation',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd8cc14fe6f14a1eb469c641ea4a96a50',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '43eb62c392b251c0c530c61cc68f4924',
+  'native_key' => 'modrelation',
+  'object' => '{"name":"modrelation","path":"{core_path}components\\/modrelation\\/","assets_path":"{assets_path}components\\/modrelation\\/"}',
+);

@@ -1,0 +1,22 @@
+Changelog for cityselect.
+
+cityselect 0.0.5
+==============
+- capability with php 5.3
+- update Sypex Geo date (2014.07.22)
+
+cityselect 0.0.4
+==============
+- refactoring
+
+cityselect 0.0.3
+==============
+- refactoring
+
+cityselect 0.0.2
+==============
+- add Sypex Geo API
+
+cityselect 0.0.1
+==============
+- Initial release.

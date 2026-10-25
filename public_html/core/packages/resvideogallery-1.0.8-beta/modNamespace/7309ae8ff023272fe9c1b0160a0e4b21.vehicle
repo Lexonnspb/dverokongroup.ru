@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ea5b0982201fe2e3b352e2bb6fed6761',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '7309ae8ff023272fe9c1b0160a0e4b21',
+  'native_key' => 'resvideogallery',
+  'object' => '{"name":"resvideogallery","path":"{core_path}components\\/resvideogallery\\/","assets_path":"{assets_path}components\\/resvideogallery\\/"}',
+);

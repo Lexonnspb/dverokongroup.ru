@@ -1,0 +1,151 @@
+<?php
+/**
+ * Resolve creating media sources
+ *
+ * @var xPDOObject $object
+ * @var array $options
+ */
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+
+            // system - group resource
+            $resource_group_id = $modx->getObject('modResourceGroup', array('name' => 'system'))->get('id');
+            define('BUILD_PARAMS_GROUP_RESOURCE', $resource_group_id);
+
+            // Manager - user group
+            $user_group_id = $modx->getObject('modUserGroup',      array('name' => 'Manager'))->get('id');
+            define('BUILD_PARAMS_USER_GROUP', $user_group_id);
+
+            // authority - role manager
+            $role_authority = $modx->getObject('modUserGroupRole',  array('name' => 'Manager'));
+            define('BUILD_PARAMS_ROLE_MANAGER', $role_authority->get('authority'));
+
+            // authority - role manager id
+            define('BUILD_PARAMS_ROLE_MANAGER_ID', $role_authority->get('id'));
+
+            //id - policy manager group
+            $policy_id      = $modx->getObject('modAccessPolicy',   array('name' => 'Manager'))->get('id');
+            define('BUILD_PARAMS_POLICY_ID', $policy_id);
+
+
+			$tmp = explode('/', MODX_ASSETS_URL);
+			$assets = $tmp[count($tmp) - 2];
+
+			$properties = array(
+                'name' => 'Manager',
+                'description' => 'for the manager',
+                'class_key' => 'sources.modFileMediaSource',
+                'properties' => array(
+                    'basePath' => array(
+                        'name' => 'basePath',
+                        'desc' => 'prop_file.basePath_desc',
+                        'type' => 'textfield',
+                        'options' => array(),
+                        'value' => 'assets/manager/',
+                        'elements' => 'core:source',
+                    ),
+                    'baseUrl' => array(
+                        'name' => 'baseUrl',
+                        'desc' => 'prop_file.baseUrl_desc',
+                        'type' => 'textfield',
+                        'elements' => 'core:source',
+                        'value' => 'assets/manager/',
+                        'options' => array(),
+                    )
+                ),
+                'is_stream' => 1,
+            );
+			/* @var $source modMediaSource */
+			if (!$source = $modx->getObject('sources.modMediaSource', array('name' => $properties['name']))) {
+				$source = $modx->newObject('sources.modMediaSource', $properties);
+			}
+			else {
+				$default = $source->get('properties');
+				foreach ($properties['properties'] as $k => $v) {
+					if (!array_key_exists($k, $default)) {
+						$default[$k] = $v;
+					}
+				}
+				$source->set('properties', $default);
+			}
+			$source->save();
+
+
+            $source_id = $source->get('id');
+
+			@mkdir(MODX_ASSETS_PATH . 'manager/');
+
+
+            $policy_id = $modx->getObject('modAccessPolicy', array('name' => 'Media Source Admin'))->get('id');
+
+
+            $sources_media = array(
+                'MS2 Images',
+                'MS2Gallery Images',
+                'Tickets Files',
+                'Uploadify Images',
+                'User Files',
+            );
+
+            $data = array();
+            # getCollection
+            $c = $modx->newQuery('sources.modMediaSource');
+            $c->where(array('name:IN' => $sources_media));
+            if($objectList = $modx->getCollection('sources.modMediaSource', $c)){
+                foreach ($objectList as $object) {
+                    $data[] =
+                        array(
+                            'target' => $object->get('id'),
+                            'principal_class' => 'modUserGroup',
+                            'principal' => BUILD_PARAMS_USER_GROUP,
+                            'authority' => BUILD_PARAMS_ROLE_MANAGER,
+                            'policy'    => $policy_id,
+                            'context_key' => 'mgr',
+                        );
+
+                }
+            }
+
+            // Добавляем ресурс
+            $data[] = array(
+                'target'        => $source_id,
+                'principal_class' => 'modUserGroup',
+                'principal'     => BUILD_PARAMS_USER_GROUP,
+                'authority'     => BUILD_PARAMS_ROLE_MANAGER,
+                'policy'        => $policy_id,
+                'context_key'   => 'mgr',
+            );
+
+            // Блокируем доступ к основному источнику файлов
+            $data[] = array(
+                'target'        => 1,
+                'principal_class' => 'modUserGroup',
+                'principal'     => 1,
+                'authority'     => 0,
+                'policy'        => $policy_id,
+                'context_key'   => 'mgr',
+            );
+
+            foreach ($data as $key => $row) {
+
+                if(!$tmp = $modx->getObject('sources.modAccessMediaSource', $row)){
+                    $tmp = $modx->newObject('sources.modAccessMediaSource');
+                    $tmp->fromArray($row);
+                    $tmp->save();
+
+                }
+            }
+
+
+			break;
+		case xPDOTransport::ACTION_UNINSTALL:
+			break;
+	}
+}
+return true;

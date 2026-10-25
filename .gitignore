@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+.env
+node_modules/
+vendor/
+# Ниже при необходимости добавим папки с кэшем и картинками (например, uploads)
+public_html/data/
+public_html/core/cache/

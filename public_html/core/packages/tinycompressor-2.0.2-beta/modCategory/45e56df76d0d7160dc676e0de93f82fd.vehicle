@@ -1,0 +1,122 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'f385f7d8eb82e0ea2a14f0b3f6046106' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"tinyCompressor","description":"Smart PNG and JPEG compression for MODX Revolution.","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\n\\/** @var tinyCompressor $compressor *\\/\\n\\n$tinyCompressorDefaultPath = MODX_CORE_PATH . \'components\\/tinycompressor\\/model\\/tinycompressor\\/\';\\n\\nswitch ($modx->event->name) {\\n    case \'OnFileManagerUpload\':\\n\\n        $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n            $scriptProperties);\\n        $compressor->compression($files, $directory, $source);\\n        break;\\n\\n    case \'OnFileManagerFileCreate\':\\n        $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n            $scriptProperties);\\n\\n        $file_path_info = pathinfo($path);\\n        $ext = strtolower($file_path_info[\'extension\']);\\n        if ( in_array($ext, array(\'jpeg\', \'jpg\', \'png\', \'pdf\')) ) {\\n\\n            if (in_array($ext, array(\'jpeg\', \'jpg\', \'png\'))) {\\n                $type = \'image\\/jpeg\';\\n            }\\n\\n            if ($ext == \'pdf\') {\\n                $type = \'application\\/pdf\';\\n            }\\n\\n            $file = array(\\n                array(\\n                    \'type\' => $type,\\n                    \'name\' => $file_path_info[\'basename\'],\\n                    \'error\' => 0\\n                )\\n            );\\n            $compressor->compression($file, $file_path_info[\'dirname\']);\\n        }\\n        break;\\n\\n    case \'OnPhpThumbRenderToFile\':\\n\\n        if ( $modx->getOption(\'tinycompressor_tinypng_thumb_enable\', null,true) == true ) {\\n            $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n                $scriptProperties);\\n            $compressor->compressionImage($filename);\\n        }\\n\\n        break;\\n\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/tinycompressor\\/elements\\/plugins\\/plugin.tinycompressor.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var tinyCompressor $compressor *\\/\\n\\n$tinyCompressorDefaultPath = MODX_CORE_PATH . \'components\\/tinycompressor\\/model\\/tinycompressor\\/\';\\n\\nswitch ($modx->event->name) {\\n    case \'OnFileManagerUpload\':\\n\\n        $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n            $scriptProperties);\\n        $compressor->compression($files, $directory, $source);\\n        break;\\n\\n    case \'OnFileManagerFileCreate\':\\n        $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n            $scriptProperties);\\n\\n        $file_path_info = pathinfo($path);\\n        $ext = strtolower($file_path_info[\'extension\']);\\n        if ( in_array($ext, array(\'jpeg\', \'jpg\', \'png\', \'pdf\')) ) {\\n\\n            if (in_array($ext, array(\'jpeg\', \'jpg\', \'png\'))) {\\n                $type = \'image\\/jpeg\';\\n            }\\n\\n            if ($ext == \'pdf\') {\\n                $type = \'application\\/pdf\';\\n            }\\n\\n            $file = array(\\n                array(\\n                    \'type\' => $type,\\n                    \'name\' => $file_path_info[\'basename\'],\\n                    \'error\' => 0\\n                )\\n            );\\n            $compressor->compression($file, $file_path_info[\'dirname\']);\\n        }\\n        break;\\n\\n    case \'OnPhpThumbRenderToFile\':\\n\\n        if ( $modx->getOption(\'tinycompressor_tinypng_thumb_enable\', null,true) == true ) {\\n            $compressor = $modx->getService(\'tinycompressor\', \'tinyCompressor\', $tinyCompressorDefaultPath,\\n                $scriptProperties);\\n            $compressor->compressionImage($filename);\\n        }\\n\\n        break;\\n\\n}"}',
+        'guid' => '85eb0eabeb7f481299b8e4f9f3d3275e',
+        'native_key' => NULL,
+        'signature' => '2a42e23bfa6a9fb5f8e862fdb2b31b2b',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'bf124796582ad19b182744a25c21ea42' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerUpload","priority":0,"propertyset":0}',
+              'guid' => 'a89ef3040d400185c1961ac34c12d74e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerUpload',
+              ),
+              'signature' => 'af72ec98c3ff0320589466331d5913b0',
+            ),
+            '150a72f60d126dcf21d2be9f0a80990d' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileManagerFileCreate","priority":0,"propertyset":0}',
+              'guid' => '4426ab0e63f731ab15045c75f618173f',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileManagerFileCreate',
+              ),
+              'signature' => 'b49d2b208b37af2e250c3babe99beccc',
+            ),
+            '365e2b49adb989c4a56ede89ef216d36' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPhpThumbRenderToFile","priority":0,"propertyset":0}',
+              'guid' => 'e337b60f63bec341be1e8d40567e0d36',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPhpThumbRenderToFile',
+              ),
+              'signature' => '47ea0d4ecfd99153e929bd10ae86eb59',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'tinycompressor',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tinycompressor-2.0.2-beta\\/modCategory\\/45e56df76d0d7160dc676e0de93f82fd\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tinycompressor"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '796843705877881123456dc5477d6201',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '45e56df76d0d7160dc676e0de93f82fd',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"tinyCompressor","rank":0}',
+);

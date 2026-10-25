@@ -1,0 +1,10 @@
+Changelog for EasyCopyright integration into MODx Revolution.
+
+	EasyCopyright 1.1.2
+	====================================
+	- Added the option to disable the built by link
+	- updated for the latest release
+
+	EasyCopyright 1.0
+	====================================
+	- initial commit

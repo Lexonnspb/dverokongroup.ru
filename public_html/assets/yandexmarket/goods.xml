@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2023-04-01T11:31:28+03:00">
+	<shop>
+		<name>Дверокон</name>
+		<company>Входные двери в Санкт-Петербурге это компания Дверокон. Собственное производство входных пластиковых дверей, алюминиевых дверей. Монтаж и демонтаж, остекление на любых объектах в Санкт-Петербурге</company>
+		<url>https://dverokongroup.ru/</url>
+		<platform>MODX Revolution</platform>
+		<version>2.8.4-pl</version>
+		<currencies>
+			<currency id="RUB" rate="1"/>
+		</currencies>
+		<categories>
+			<category id="67" parentId="91">Окна с покраской</category>
+			<category id="68" parentId="110">Балконные двери</category>
+			<category id="70" parentId="99">Окна из сосны</category>
+			<category id="91" parentId="52">Пластиковые окна</category>
+			<category id="92" parentId="91">Окна с ламинацией</category>
+			<category id="93" parentId="91">Окна с фальш-накладками</category>
+			<category id="94" parentId="91">Окна со шпросами</category>
+			<category id="97" parentId="91">Профильные системы</category>
+			<category id="98" parentId="52">Нестандартные формы</category>
+			<category id="99" parentId="52">Деревянные окна</category>
+			<category id="100" parentId="99">Окна из лиственницы</category>
+			<category id="101" parentId="99">Окна из дуба</category>
+			<category id="102" parentId="99">Дерево-алюминиевые окна</category>
+			<category id="110" parentId="52">Пластиковые двери</category>
+			<category id="136" parentId="110">Усиленные пластиковые двери</category>
+			<category id="138" parentId="110">Межкомнатные пластиковые двери</category>
+			<category id="144" parentId="110">Входные пластиковые двери</category>
+			<category id="157" parentId="97">Rehau</category>
+			<category id="164" parentId="97">Deceuninck</category>
+			<category id="171" parentId="97">Reachmont</category>
+			<category id="185" parentId="52">Алюминиевые двери</category>
+			<category id="186" parentId="185">Тёплые алюминиевые двери</category>
+			<category id="187" parentId="185">Холодные алюминиевые двери</category>
+			<category id="203" parentId="99">Окна для бани и сауны</category>
+			<category id="234" parentId="185">Маятниковые алюминиевые двери</category>
+		</categories>
+		<enable_auto_discounts>true</enable_auto_discounts>
+		<offers>
+			<offer id="85">
+				<name>Окно ПВХ покраска  500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-500x1500-gluxoe</url>
+				<price>4500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/85/okno-gluxoe.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Глухое</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+			</offer>
+			<offer id="86">
+				<name>Окно ПВХ покраска 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-1500x1500-pokraska</url>
+				<price>10900</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/86/1500x1500-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="87">
+				<name>Окно ПВХ покраска 1520х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-1520x2220-pokraska</url>
+				<price>14300</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/87/1520x2220-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="130">
+				<name>REHAU BLITZ NEW 60 700х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/rehau-blitz-new-60</url>
+				<price>10400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/130/balkonnaya-dver-rehau-blitz-new.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Балконная дверь из профиля REHAU BLITZ — это знаменитое немецкое качество и дизайн от REHAU по специальной привлекательной цене. 3-камерная система REHAU BLITZ с глубиной 60 мм отвечает современным требованиям к тепло- и звукоизоляции, дизайну, надежности и долговечности. Два контура уплотнений станут надежной преградой на пути сквозняков, влаги и пыли, а гладкая поверхность профилей не обременит заказчика в повседневном уходе за окнами.</p>
+<p>Обновлённый дизайн профилей: новое сочетание радиусов и ступенчатого наклона лицевых поверхностей профилей обеспечивает их характерный облик. Смещённые лицевые поверхности коробки и створки определяют классический тип оконной системы.</p>
+]]></description>
+				<param name="Ширина">700</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Rehau Blitz new</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="131">
+				<name>REACHMONT ECO 60 720х2140</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/reachmont-60</url>
+				<price>10300</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/131/reachmont-eco-60.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Профильная система REACHMONT ECO, разработанная с использованием передовых английских технологий в области экструзии, успешно конкурирует с лидирующими торговыми марками профильных систем. Английское качество, воплощенное в строгих классических линиях этой профильной системы, по достоинству оценят люди, чей дом украсят балконные двери REACHMONT ECO.</p>
+]]></description>
+				<param name="Ширина">720</param>
+				<param name="Высота">2140</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="133">
+				<name>REHAU GRAZIO 70 750х2200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/rehau-grazio-70</url>
+				<price>12000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/133/rehau-grazio.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Новая пятикамерная система  GRAZIO – уникальное изобретение REHAU, сочетающее в себе изящество формы и исключительные теплозащитные свойства.</p>
+<p>Несмотря на грациозный дизайн — это крепкая функциональная система способная выдерживать экстремально низкие температуры и повышенную влажность.</p>
+<p>Балконные двери GRAZIO сохраняют тепло даже в самых экстремальных температурных условиях и обеспечивает тем самым исключительно высокое сопротивление теплопередачи: 0,85 м2°С/Вт. и существенную экономию теплоэнергии.</p>
+]]></description>
+				<param name="Ширина">2200</param>
+				<param name="Высота">750</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Rehau Grazio</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="134">
+				<name>REHAU 80 INTELIO 700х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/rehau-intelio</url>
+				<price>15800</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/134/rehau-intelio.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">700</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">REHAU 80 INTELIO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="135">
+				<name>Deceuninck Space 700х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/deceuninck-space</url>
+				<price>15000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/135/deceuninck-space.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">700</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Deceuninck Space</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="139">
+				<name>REACHMONT ECO 60 900х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vxodnyie-plastikovyie-dveri/reachmont-60</url>
+				<price>17000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>138</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/139/dver-richmond.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Профильная система REACHMONT ECO, разработанная с использованием передовых английских технологий в области экструзии, успешно конкурирует с лидирующими торговыми марками профильных систем. Английское качество, воплощенное в строгих классических линиях этой профильной системы, по достоинству оценят люди, чей дом украсят балконные двери REACHMONT ECO.</p>
+]]></description>
+				<param name="Ширина">900</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="140">
+				<name>REACHMONT ECO 60 950х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vxodnyie-plastikovyie-dveri/reachmont-eco-60</url>
+				<price>17500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>138</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/140/richmond-60-skoba.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Профильная система REACHMONT ECO, разработанная с использованием передовых английских технологий в области экструзии, успешно конкурирует с лидирующими торговыми марками профильных систем. Английское качество, воплощенное в строгих классических линиях этой профильной системы, по достоинству оценят люди, чей дом украсят балконные двери REACHMONT ECO.</p>
+]]></description>
+				<param name="Ширина">950</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="141">
+				<name>REACHMONT ECO 60 1300х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vxodnyie-plastikovyie-dveri/reachmont-eco-60-dvuh</url>
+				<price>30000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>138</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/141/richmond-2x-stv.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2100</param>
+				<param name="Высота">1300</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="145">
+				<name>BRUSBOX T-94 900х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vhodnyie-plastikovyie-dveri/brusbox-94</url>
+				<price>18200</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>144</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/145/dver-richmond.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">900</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">BRUSBOX T-94</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="146">
+				<name>DECEUNINCK WAIZ 60 950х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vhodnyie-plastikovyie-dveri/deceuninck-60</url>
+				<price>19000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>144</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/146/richmond-60-skoba.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">950</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Deceuninck WAIZ 60</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="147">
+				<name>BRUSBOX T-94 1300х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/vhodnyie-plastikovyie-dveri/brusbox-dvuh</url>
+				<price>27000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>144</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/147/richmond-2x-stv.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1300</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">BRUSBOX T-94</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="151">
+				<name>KBE70 Expert 700х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/dvernyie-profilnyie-sistemyi/kbe70-expert</url>
+				<price>12000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>68</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/151/deceuninck-bautec-neo.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">700</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Профиль">Deceuninck Bautec NEO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="152">
+				<name>BRUSBOX T-118 900х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/usilennyie-vxodnyie-plastikovyie-dveri/brusbox-t-118</url>
+				<price>19600</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>136</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/152/dver-richmond.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">900</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">BRUSBOX T-118</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="153">
+				<name>BRUSBOX T-118 950х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/usilennyie-vxodnyie-plastikovyie-dveri/brusbox-t-118-skoba</url>
+				<price>20100</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>136</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/153/richmond-60-skoba.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">950</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">BRUSBOX T-118</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="154">
+				<name>BRUSBOX T-118 1300х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-dveri/usilennyie-vxodnyie-plastikovyie-dveri/brusbox-t-118-dvuh</url>
+				<price>33000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>136</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/154/richmond-2x-stv.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1300</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">BRUSBOX T-118</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="158">
+				<name>REHAU 60 BLITZ NEW 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-enwin-waiz-eco-60</url>
+				<price>9500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/158/rehau-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Rehau Blitz new</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="159">
+				<name>REHAU 60 GRAZIO 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-erwin-waiz-70</url>
+				<price>10600</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/159/rehau-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p> </p>
+<p> </p>
+]]></description>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Rehau Grazio</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="160">
+				<name>REHAU 80 INTELIO 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-deceuninck-favorit</url>
+				<price>14000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/160/rehau-intelio.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ante et velit consequat placerat. Curabitur in convallis dui. Mauris dictum auctor eros sed semper. Etiam consequat purus auctor lobortis aliquet. Nunc eget gravida tellus. Sed pharetra justo est, eu euismod felis porttitor nec. Maecenas a diam ultrices, aliquam massa a, lobortis felis. Aliquam euismod, quam ut auctor hendrerit, neque nunc faucibus leo, vitae convallis lorem metus et libero. Donec pulvinar sollicitudin blandit.</p>
+Lorem ipsum dolor sit amet
+<p>Proin rutrum euismod nunc auctor elementum. Maecenas a nulla sed ex convallis dignissim nec vel purus. Vivamus eleifend molestie cursus. Sed bibendum rhoncus velit a fringilla. Integer porttitor pulvinar nisi, sit amet varius elit venenatis in. Duis sagittis odio ligula, non hendrerit sapien blandit ut. Nullam at vulputate tortor. Nunc nec interdum quam, eget varius turpis.</p>
+Lorem ipsum dolor sit amet
+<p>Aliquam egestas, eros ac feugiat rhoncus, risus nunc sagittis tortor, sed pharetra justo elit quis lorem. Curabitur non lectus ornare, malesuada lectus a, congue felis. Donec eu massa efficitur, lacinia nibh quis, varius tortor. Duis non nisi quis orci luctus maximus. Vestibulum eu porta nibh. Phasellus in ipsum ac lorem semper accumsan. Cras ut ipsum imperdiet, blandit lacus dapibus, sagittis augue. Etiam tristique, eros ac convallis feugiat, magna massa luctus arcu, vitae pulvinar nisi libero ut nisi. Mauris at fermentum urna. Aliquam eros metus, tempus vel sem vel, consequat rhoncus lacus.</p>
+]]></description>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">REHAU 80 INTELIO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="161">
+				<name>REHAU 60 BLITZ NEW 1520х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-rehau-blitz</url>
+				<price>11900</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/161/1520x2220-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Rehau Blitz new</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="162">
+				<name>REHAU 60 GRAZIO 1250х1900</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-rehau-delight</url>
+				<price>15300</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/162/rixau-graczio-arka.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1250</param>
+				<param name="Высота">1900</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Rehau Grazio</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="163">
+				<name>REHAU 80 INTELIO 1420х1760</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/rehau/kopiya-rehau-70-grazio</url>
+				<price>19400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>157</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/163/rehau-intelio111.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1760</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">REHAU 80 INTELIO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="165">
+				<name>DECEUNINCK WAIZ 60 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-enwin-waiz-eco-60</url>
+				<price>8800</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/165/1500x1500-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Deceuninck WAIZ 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="166">
+				<name>DECEUNINCK BAUTEC NEO 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-erwin-waiz-70</url>
+				<price>10100</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/166/1500x1500-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 </p>
+<p>Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 </p>
+Erwin Waiz 70 
+<p>Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 Erwin Waiz 70 </p>
+<p> </p>
+]]></description>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Deceuninck Bautec NEO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="167">
+				<name>DECEUNINCK SPACE 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-deceuninck-favorit</url>
+				<price>12800</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/167/1500x1500-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ante et velit consequat placerat. Curabitur in convallis dui. Mauris dictum auctor eros sed semper. Etiam consequat purus auctor lobortis aliquet. Nunc eget gravida tellus. Sed pharetra justo est, eu euismod felis porttitor nec. Maecenas a diam ultrices, aliquam massa a, lobortis felis. Aliquam euismod, quam ut auctor hendrerit, neque nunc faucibus leo, vitae convallis lorem metus et libero. Donec pulvinar sollicitudin blandit.</p>
+Lorem ipsum dolor sit amet
+<p>Proin rutrum euismod nunc auctor elementum. Maecenas a nulla sed ex convallis dignissim nec vel purus. Vivamus eleifend molestie cursus. Sed bibendum rhoncus velit a fringilla. Integer porttitor pulvinar nisi, sit amet varius elit venenatis in. Duis sagittis odio ligula, non hendrerit sapien blandit ut. Nullam at vulputate tortor. Nunc nec interdum quam, eget varius turpis.</p>
+Lorem ipsum dolor sit amet
+<p>Aliquam egestas, eros ac feugiat rhoncus, risus nunc sagittis tortor, sed pharetra justo elit quis lorem. Curabitur non lectus ornare, malesuada lectus a, congue felis. Donec eu massa efficitur, lacinia nibh quis, varius tortor. Duis non nisi quis orci luctus maximus. Vestibulum eu porta nibh. Phasellus in ipsum ac lorem semper accumsan. Cras ut ipsum imperdiet, blandit lacus dapibus, sagittis augue. Etiam tristique, eros ac convallis feugiat, magna massa luctus arcu, vitae pulvinar nisi libero ut nisi. Mauris at fermentum urna. Aliquam eros metus, tempus vel sem vel, consequat rhoncus lacus.</p>
+]]></description>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Deceuninck Space</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="168">
+				<name>DECEUNINCK WAIZ 60 750х1450</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-rehau-blitz</url>
+				<price>5900</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/168/750x1450.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">750</param>
+				<param name="Высота">1450</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Deceuninck WAIZ 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="169">
+				<name>DECEUNINCK BAUTEC NEO 1200х1850</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-rehau-delight</url>
+				<price>10600</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/169/1200x1850-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">1850</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Deceuninck Bautec NEO</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="170">
+				<name>DECEUNINCK SPACE 1420х1760</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/deceuninck/kopiya-kopiya-rehau-70-grazio</url>
+				<price>17800</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>164</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/170/rehau-intelio111.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ante et velit consequat placerat. Curabitur in convallis dui. Mauris dictum auctor eros sed semper. Etiam consequat purus auctor lobortis aliquet. Nunc eget gravida tellus. Sed pharetra justo est, eu euismod felis porttitor nec. Maecenas a diam ultrices, aliquam massa a, lobortis felis. Aliquam euismod, quam ut auctor hendrerit, neque nunc faucibus leo, vitae convallis lorem metus et libero. Donec pulvinar sollicitudin blandit.</p>
+Lorem ipsum dolor sit amet
+<p>Proin rutrum euismod nunc auctor elementum. Maecenas a nulla sed ex convallis dignissim nec vel purus. Vivamus eleifend molestie cursus. Sed bibendum rhoncus velit a fringilla. Integer porttitor pulvinar nisi, sit amet varius elit venenatis in. Duis sagittis odio ligula, non hendrerit sapien blandit ut. Nullam at vulputate tortor. Nunc nec interdum quam, eget varius turpis.</p>
+Lorem ipsum dolor sit amet
+<p>Aliquam egestas, eros ac feugiat rhoncus, risus nunc sagittis tortor, sed pharetra justo elit quis lorem. Curabitur non lectus ornare, malesuada lectus a, congue felis. Donec eu massa efficitur, lacinia nibh quis, varius tortor. Duis non nisi quis orci luctus maximus. Vestibulum eu porta nibh. Phasellus in ipsum ac lorem semper accumsan. Cras ut ipsum imperdiet, blandit lacus dapibus, sagittis augue. Etiam tristique, eros ac convallis feugiat, magna massa luctus arcu, vitae pulvinar nisi libero ut nisi. Mauris at fermentum urna. Aliquam eros metus, tempus vel sem vel, consequat rhoncus lacus.</p>
+]]></description>
+				<param name="Ширина">1760</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">Deceuninck Space</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="172">
+				<name>REACHMONT ECO 60 750х1450</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/reachmont-eco-60</url>
+				<price>5500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/172/750x1450.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">750</param>
+				<param name="Высота">1450</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="173">
+				<name>REACHMONT PRESTIGE 70 750х1450</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/kopiya-kopiya-kopiya-erwin-waiz-70</url>
+				<price>6900</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/173/750x1450.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">750</param>
+				<param name="Высота">1450</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Prestige 70</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="174">
+				<name>REACHMONT ECO 60 1450х1450</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/kopiya-kopiya-kopiya-deceuninck-favorit</url>
+				<price>10000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/174/1450x1450-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1450</param>
+				<param name="Высота">1450</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="175">
+				<name>REACHMONT ECO 60 1520х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/kopiya-kopiya-kopiya-rehau-blitz</url>
+				<price>10800</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/175/1520x2220-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="176">
+				<name>REACHMONT PRESTIGE 70 1250х1900</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/kopiya-kopiya-kopiya-rehau-delight</url>
+				<price>13500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/176/rixau-graczio-arka.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1250</param>
+				<param name="Высота">1900</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Reachmont Prestige 70</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="177">
+				<name>REACHMONT PRESTIGE 70 1420х1760</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/profilnyie-sistemyi/reachmont/kopiya-kopiya-kopiya-rehau-70-grazio</url>
+				<price>14400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>171</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/177/rehau-intelio111.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1760</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">Reachmont Prestige 70</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="178">
+				<name>Окно ПВХ покраска 750х1520</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-pvx-pokraska-750x1520</url>
+				<price>7600</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/178/750x1520-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">750</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="179">
+				<name>Окно ПВХ покраска 1450х1450</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-pvx-pokraska-1450x1450</url>
+				<price>13500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/179/1450x1450-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">1450</param>
+				<param name="Высота">1450</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="180">
+				<name>Окно ПВХ покраска 1200х1850</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/czvetnyie-okna/okno-pvx-pokraska-1200x1850</url>
+				<price>11360</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>67</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/180/1200x1850-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Покраска по каталогу Ral с внешней стороны</p>
+]]></description>
+				<param name="Ширина">1200</param>
+				<param name="Высота">1850</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+				<param name="Фурнитура">AXOR</param>
+			</offer>
+			<offer id="181">
+				<name>Окно ПВХ ламинация 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/plastikovyie-okna/laminirovannyie-okna/okno-pvx-laminacziya-1500x1500</url>
+				<price>10400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>92</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/181/1500x1500-pokraska.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<description><![CDATA[<p>Внешняя ламинация по каталогу Renolit</p>
+]]></description>
+				<oldprice>0</oldprice>
+			</offer>
+			<offer id="188">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1000х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1000x2100</url>
+				<price>49000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/188/alyuminievaya-dver-tyoplaya-tpt-65-1000x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>55000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="189">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1350х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1350x2050</url>
+				<price>75000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/189/alyuminievaya-dver-tyoplaya-tpt-65-1350x2050.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1350</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>80000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="190">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1350х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1350x2150</url>
+				<price>76000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/190/alyuminievaya-dver-tyoplaya-tpt-65-1350x2150.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1350</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>81000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="192">
+				<name>Алюминиевая дверь ТП-45 800х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-800x2100</url>
+				<price>30000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/192/alyuminievaya-dver-xolodnaya-tp-45-800x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">800</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>35000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="197">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-1500x1500</url>
+				<price>53000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/197/okno-derevyannoe-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="198">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА  1520х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-1520x1500</url>
+				<price>61000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/198/derevyannoe-okno-1520x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="199">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА  1520х2000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-1520x2000</url>
+				<price>83500</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/199/derevyannoe-okno-1520x2000.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2000</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="200">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА  1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-1500x1500</url>
+				<price>66000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/200/okno-derevyannoe-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="201">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА  1520х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-1520x1500</url>
+				<price>75000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/201/derevyannoe-okno-1520x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="202">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА  1520х2000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-1520x2000</url>
+				<price>104000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/202/derevyannoe-okno-1520x2000.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2000</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="204">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ  1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-1500x1500</url>
+				<price>98000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/204/okno-derevyannoe-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="205">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ  1520х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-1520x1500</url>
+				<price>109000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/205/derevyannoe-okno-1520x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="206">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ  1520х2000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-1520x2000</url>
+				<price>151000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/206/derevyannoe-okno-1520x2000.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2000</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="207">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО СОСНА 1500х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-sosna-1500x1500</url>
+				<price>71000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/207/okno-derevyannoe-1500x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="208">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО ЛИСТВЕННИЦА 1520х1500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-listvennicza-1520x1500</url>
+				<price>83000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/208/derevyannoe-okno-1520x1500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="209">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО ДУБ 1520х2000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-dub-1520x2000</url>
+				<price>114000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/209/derevyannoe-okno-1520x2000.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2000</param>
+				<param name="Высота">1520</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="210">
+				<name>ДЕРЕВЯННОЕ ОКНО ДЛЯ БАНИ 500х600</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-dlya-bani-i-saunyi/derevyannoe-okno-dlya-bani-500x600</url>
+				<price>34000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>203</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/210/okno-dlya-bani-500x600.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">600</param>
+				<param name="Высота">500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="212">
+				<name>REACHMONT ECO 60 1000х1000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/krugloe-okno-pvx-1000x1000</url>
+				<price>8700</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/212/krugloe-okno.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">1000</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Глухое</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Reachmont Eco 60</param>
+			</offer>
+			<offer id="213">
+				<name>DECEUNINCK WAIZ 60 1200х1000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/deceuninck-waiz-60-1200x1000</url>
+				<price>4900</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/213/treugolnoe-okno.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">1000</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Deceuninck WAIZ 60</param>
+			</offer>
+			<offer id="214">
+				<name>REHAU 60 BLITZ NEW 1800х700</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/rehau-60-blitz-new-1800x700</url>
+				<price>13000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/214/arochnoe-okno.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1800</param>
+				<param name="Высота">700</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Rehau Blitz new</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="215">
+				<name>REHAU 60 BLITZ NEW 1500х1850</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/rehau-60-blitz-new-1500x1850</url>
+				<price>14400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/215/trapecziya.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">1850</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">Rehau Blitz new</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="216">
+				<name>REHAU GRAZIO 70 1200х2600</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/rehau-grazio-70-1200x2600</url>
+				<price>19400</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/216/arochnoe-okno-bol.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">2600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Rehau Grazio</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="217">
+				<name>DECEUNINCK WAIZ 60 1200х1600</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/nestandartnyie-formyi/deceuninck-waiz-60-1200x1600</url>
+				<price>7000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>98</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/217/okno-romb.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">1600</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Глухое</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Deceuninck WAIZ 60</param>
+			</offer>
+			<offer id="239">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1350х2200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1350x2200</url>
+				<price>77000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/239/alyuminievaya-dver-tyoplaya-tpt-65-1350x2200.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1350</param>
+				<param name="Высота">2200</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>82000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="240">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1500х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1500x2100</url>
+				<price>79000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/240/alyuminievaya-dver-tyoplaya-tpt-65-1500x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">2200</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>84000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="241">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1500х2500</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1500x2500</url>
+				<price>89000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/241/alyuminievaya-dver-tyoplaya-tpt-65-1500x2500.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1500</param>
+				<param name="Высота">2500</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>95000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="242">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1800х2200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1800x2200</url>
+				<price>80000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/242/alyuminievaya-dver-tyoplaya-tpt-65-1800x2200.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1800</param>
+				<param name="Высота">2200</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>85000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="243">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1000х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1000x2050</url>
+				<price>49000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/243/alyuminievaya-dver-tyoplaya-tpt-65-1000x2050.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>55000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="244">
+				<name>Алюминиевая дверь тёплая ТПТ-65 1850х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/tyoplyie-alyuminievyie-dveri/alyuminievaya-dver-tyoplaya-tpt-65-1850x2050</url>
+				<price>82000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>186</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/244/alyuminievaya-dver-tyoplaya-tpt-65-1850x2050.jpeg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1850</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>90000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТПТ-65</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="246">
+				<name>Алюминиевая дверь ТП-45 950х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-950x2050</url>
+				<price>32000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/246/alyuminievaya-dver-xolodnaya-tp-45-950x2050.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">950</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>35000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="247">
+				<name>Алюминиевая дверь ТП-45 1350х2050</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1350x2050</url>
+				<price>50000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/247/alyuminievaya-dver-xolodnaya-tp-45-1350x2050.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1350</param>
+				<param name="Высота">2050</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>55000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="248">
+				<name>Алюминиевая дверь ТП-45 950х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-950x2150</url>
+				<price>33000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/248/alyuminievaya-dver-xolodnaya-tp-45-950x2150.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">950</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>38000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="249">
+				<name>Алюминиевая дверь ТП-45 1420х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1420x2100</url>
+				<price>51000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/249/alyuminievaya-dver-xolodnaya-tp-45-1420x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1420</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>56000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="250">
+				<name>Алюминиевая дверь ТП-45 1000х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1000x2100</url>
+				<price>34000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/250/alyuminievaya-dver-xolodnaya-tp-45-1000x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>39000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="251">
+				<name>Алюминиевая дверь ТП-45 1450х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1450x2100</url>
+				<price>52000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/251/alyuminievaya-dver-xolodnaya-tp-45-1450x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1450</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>57000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="252">
+				<name>Алюминиевая дверь ТП-45 1900х2100</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1900x2100</url>
+				<price>58000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/252/alyuminievaya-dver-xolodnaya-tp-45-1900x2100.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1900</param>
+				<param name="Высота">2100</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>65000</oldprice>
+				<param name="Кол-во створок">2</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="253">
+				<name>Алюминиевая дверь ТП-45 1000х2150</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/alyuminievyie-dveri/xolodnyie-alyuminievyie-dveri/alyuminievaya-dver-tp-45-1000x2150</url>
+				<price>33000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>187</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/253/alyuminievaya-dver-xolodnaya-tp-45-1000x2150.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">2150</param>
+				<param name="Тип стекопакета">Однокамерный</param>
+				<param name="Конфигурация открывания">Поворотная</param>
+				<oldprice>38000</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">Татпроф ТП-45</param>
+				<param name="Фурнитура">Дверная</param>
+			</offer>
+			<offer id="254">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА  800х1420</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-800x1420</url>
+				<price>36000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/254/800x1420-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">800</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="255">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА  1420х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-1420x2220</url>
+				<price>70000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/255/1420x2220-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="256">
+				<name>ДЕРЕВЯННОЕ ОКНО СОСНА  600х1200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-sosnyi/derevyannoe-okno-sosna-600x1200</url>
+				<price>32000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>70</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/256/600x1200-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="257">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА  800х1420</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-800x1420</url>
+				<price>46000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/257/800x1420-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">800</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="258">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА  1420х2200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-1420x2200</url>
+				<price>89000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/258/1420x2220-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="259">
+				<name>ДЕРЕВЯННОЕ ОКНО ЛИСТВЕННИЦА 600х1200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-listvenniczyi/derevyannoe-okno-listvennicza-600x1200</url>
+				<price>41000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>100</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/259/600x1200-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="260">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ 800х1420</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-800x1420</url>
+				<price>69000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/260/800x1420-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">800</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="261">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ 600х1200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-600x1200</url>
+				<price>60000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/261/600x1200-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="262">
+				<name>ДЕРЕВЯННОЕ ОКНО ДУБ 1420х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-iz-duba/derevyannoe-okno-dub-1420x2220</url>
+				<price>139000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>101</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/262/1420x2220-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="263">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО СОСНА 600х1200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-sosna-600x1200</url>
+				<price>39000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/263/600x1200-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="264">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО СОСНА 800х1420</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-sosna-800x1420</url>
+				<price>45000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/264/800x1420-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">800</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="265">
+				<name>ДЕРЕВО-АЛЮМИНИЕВОЕ ОКНО ДУБ 1420х2220</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/derevo-alyuminievyie-okna/derevo-alyuminievoe-okno-dub-1420x2220</url>
+				<price>103000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>102</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/265/1420x2220-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">2220</param>
+				<param name="Высота">1420</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">3</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="266">
+				<name>ДЕРЕВЯННОЕ ОКНО ДЛЯ БАНИ 600х1200</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-dlya-bani-i-saunyi/derevyannoe-okno-dlya-bani-600x1200</url>
+				<price>48000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>203</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/266/600x1200-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1200</param>
+				<param name="Высота">600</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+			<offer id="267">
+				<name>ДЕРЕВЯННОЕ ОКНО ДЛЯ БАНИ 500х1000</name>
+				<url>https://dverokongroup.ru/produkcziya-kompanii-dverokon/derevyannyie-okna/okna-dlya-bani-i-saunyi/derevyannoe-okno-dlya-bani-500x1000</url>
+				<price>20000</price>
+				<currencyId>RUB</currencyId>
+				<categoryId>203</categoryId>
+				<picture>https://dverokongroup.ru/data/pages/267/500x1000-foto.jpg</picture>
+				<delivery>true</delivery>
+				<pickup>false</pickup>
+				<param name="Ширина">1000</param>
+				<param name="Высота">500</param>
+				<param name="Тип стекопакета">Двухкамерный</param>
+				<param name="Конфигурация открывания">Поворотно-откидная</param>
+				<oldprice>0</oldprice>
+				<param name="Кол-во створок">1</param>
+				<param name="Профиль">IV 78</param>
+				<param name="Фурнитура">Roto NT</param>
+			</offer>
+		</offers>
+	</shop>
+</yml_catalog>

@@ -1,0 +1,124 @@
+@mixin rvg-progress-bar($top-color,$bottom-color){
+  text-shadow: none;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 75%, transparent 75%, transparent), linear-gradient(top, $top-color, $bottom-color);
+  background-repeat: repeat;
+  background-size: 40px 40px, 100% 100%;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin rvg-make-grid-columns($i: 1, $list: ".rvg-col-xs-#{$i}, .rvg-col-sm-#{$i}, .rvg-col-md-#{$i}, .rvg-col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .rvg-col-xs-#{$i}, .rvg-col-sm-#{$i}, .rvg-col-md-#{$i}, .rvg-col-lg-#{$i}";
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ceil(($grid-gutter-width / 2));
+    padding-right: floor(($grid-gutter-width / 2));
+  }
+}
+
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin rvg-float-grid-columns($class, $i: 1, $list: ".rvg-col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .rvg-col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+
+@mixin rvg-calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .rvg-col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index > 0) {
+    .rvg-col-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) and ($index == 0) {
+    .rvg-col-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+  @if ($type == pull) and ($index > 0) {
+    .rvg-col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) and ($index == 0) {
+    .rvg-col-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+  @if ($type == offset) {
+    .rvg-col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin rvg-loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include rvg-calc-grid-column($i, $class, $type);
+  }
+}
+
+
+// Create grid for specific class
+@mixin rvg-make-grid($class) {
+  @include rvg-float-grid-columns($class);
+  @include rvg-loop-grid-columns($grid-columns, $class, width);
+  @include rvg-loop-grid-columns($grid-columns, $class, pull);
+  @include rvg-loop-grid-columns($grid-columns, $class, push);
+  @include rvg-loop-grid-columns($grid-columns, $class, offset);
+}
+
+// Medium
+
+@mixin respond-to($media) {
+  @if $media == small-up {
+    @media #{$small-up} { @content; }
+  }
+  @else if $media == small-only {
+    @media  #{$small-only} { @content; }
+  }
+  @else if $media == medium-up {
+    @media  #{$medium-up} { @content; }
+  }
+  @else if $media == medium-only {
+    @media  #{$medium-only} { @content; }
+  }
+  @else if $media == large-up {
+    @media  #{$large-up} { @content; }
+  }
+  @else if $media == large-only {
+    @media  #{$large-only} { @content; }
+  }
+  @else if $media ==  xlarge-up {
+    @media  #{$xlarge-up} { @content; }
+  }
+  @else if $media ==  xlarge-only {
+    @media  #{$xlarge-only} { @content; }
+  }
+  @else if $media ==  xxlarge-up {
+    @media  #{$xxlarge-up} { @content; }
+  }
+  @else if $media ==  xxlarge-only {
+    @media  #{$xxlarge-only} { @content; }
+  }
+}

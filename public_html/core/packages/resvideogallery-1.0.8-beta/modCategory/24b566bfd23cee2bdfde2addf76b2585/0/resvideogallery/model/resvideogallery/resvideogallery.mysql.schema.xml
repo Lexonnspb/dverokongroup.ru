@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="resvideogallery" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+	<object class="RvgVideos" table="rvg_videos" extends="xPDOSimpleObject">
+		<field key="resource_id" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+		<field key="title" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="description" dbtype="text" phptype="string" null="false" />
+		<field key="video_key" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="thumb" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="duration" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+		<field key="url" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="provider" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="false" default="1" index="index" />
+		<field key="rank" dbtype="smallint" precision="3" phptype="integer" null="false" default="0" index="index" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="false" index="index" />
+		<field key="createdby" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+		<field key="pub_date" dbtype="int" precision="11" phptype="integer" null="false" />
+		<field key="unpub_date" dbtype="int" precision="11" phptype="integer" null="false" />
+		<field key="properties" dbtype="text" phptype="string" null="false" />
+
+		<index alias="resource_id" name="resource_id" primary="false" unique="false" type="BTREE" >
+			<column key="resource_id" length="" collation="A" null="false" />
+		</index>
+		<index alias="rank" name="rank" primary="false" unique="false" type="BTREE" >
+			<column key="rank" length="" collation="A" null="false" />
+		</index>
+		<index alias="active" name="active" primary="false" unique="false" type="BTREE" >
+			<column key="active" length="" collation="A" null="false" />
+		</index>
+		<index alias="duration" name="duration" primary="false" unique="false" type="BTREE" >
+			<column key="duration" length="" collation="A" null="false" />
+		</index>
+		<index alias="createdby" name="createdby" primary="false" unique="false" type="BTREE" >
+			<column key="createdby" length="" collation="A" null="false" />
+		</index>
+		<index alias="createdon" name="createdon" primary="false" unique="false" type="BTREE" >
+			<column key="createdon" length="" collation="A" null="false" />
+		</index>
+		<composite alias="Tags" class="RvgVideosTags" local="id" foreign="video_id" cardinality="many" owner="local" />
+	</object>
+	<object class="RvgVideosTags" table="rvg_videos_tags" extends="xPDOSimpleObject">
+		<field key="video_id" dbtype="int" precision="11" phptype="integer" null="false" index="index" />
+		<field key="tag" dbtype="varchar" precision="255" phptype="string" null="false" />
+
+		<index alias="video" name="video" primary="false" unique="false" type="BTREE" >
+			<column key="video_id" length="" collation="A" null="false" />
+			<column key="tag" length="" collation="A" null="false" />
+		</index>
+		<aggregate alias="Video" class="RvgVideos" local="video_id" foreign="id" cardinality="one" owner="foreign" />
+	</object>
+</model>

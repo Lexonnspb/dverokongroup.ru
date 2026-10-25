@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_SETTING_UPDATE',
+  'namespace' => 'resvideogallery',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '17266f4e9bc77e81fc902f36bb8474e5',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '39fc69bc6a61fe7122a6822e5fb00206',
+  'native_key' => 'resvideogallery.date_format',
+  'object' => '{"key":"resvideogallery.date_format","value":"\\t\\n%d.%m.%Y %H:%M","xtype":"textfield","namespace":"resvideogallery","area":"resvideogallery.resource","editedon":"0000-00-00 00:00:00"}',
+);

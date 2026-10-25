@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'tinycompressor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e1d3e4b61f9d3d0b4f475bf0b2e0cf7b',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd7c9c9509d78c7816ad9ffb54b0c4a16',
+  'native_key' => 'tinycompressor_ilovepdf_project_id',
+  'object' => '{"key":"tinycompressor_ilovepdf_project_id","value":"","xtype":"textfield","namespace":"tinycompressor","area":"ILovePDF","editedon":null,"name":"ID \\u043f\\u0440\\u043e\\u0435\\u043a\\u0442\\u0430 \\u0432 ILovePDF","description":"ID \\u043f\\u0440\\u043e\\u0435\\u043a\\u0442\\u0430 \\u0434\\u043b\\u044f \\u0441\\u0436\\u0430\\u0442\\u0438\\u044f pdf. \\u041f\\u043e\\u043b\\u0443\\u0447\\u0438\\u0442\\u044c \\u043c\\u043e\\u0436\\u043d\\u043e \\u043f\\u043e \\u0441\\u0441\\u044b\\u043b\\u043a\\u0435: <a href=\\"https:\\/\\/developer.ilovepdf.com\\/signup\\" target=\\"_blank\\">ilovepdf.com<\\/a>"}',
+);

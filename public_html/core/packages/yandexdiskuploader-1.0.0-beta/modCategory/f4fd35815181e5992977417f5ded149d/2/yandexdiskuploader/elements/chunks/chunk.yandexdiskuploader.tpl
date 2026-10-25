@@ -1,0 +1,1 @@
+<div class="yaDiskUploader" data-name="[[+name]]"><div class="dz-message">Прикрепить файлы</div></div>

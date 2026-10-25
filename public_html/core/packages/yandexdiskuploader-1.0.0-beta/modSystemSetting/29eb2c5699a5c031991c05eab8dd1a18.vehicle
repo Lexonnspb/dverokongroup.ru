@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'yandexdiskuploader',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'bd16a216b8e07adbc1a716a62547b5fe',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '29eb2c5699a5c031991c05eab8dd1a18',
+  'native_key' => 'yandexdiskuploader_frontend_css',
+  'object' => '{"key":"yandexdiskuploader_frontend_css","value":"[[+cssUrl]]web\\/default.css","xtype":"textfield","namespace":"yandexdiskuploader","area":"yandexdiskuploader_main","editedon":null}',
+);

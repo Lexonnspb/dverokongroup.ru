@@ -1,0 +1,34 @@
+<?php
+/**
+ * Resolve creating policies
+ *
+ * @var xPDOObject $object
+ * @var array $options
+ */
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+
+			if ($policy = $modx->getObject('modAccessPolicy',array('name' => 'Manager'))) {
+				if ($template = $modx->getObject('modAccessPolicyTemplate',array('name' => 'AdministratorTemplate'))) {
+					$policy->set('template',$template->get('id'));
+					$policy->save();
+				} else {
+					$modx->log(xPDO::LOG_LEVEL_ERROR,'[modAccessManager] Could not find AdministratorTemplate Access Policy Template!');
+				}
+
+				break;
+
+			} else {
+				$modx->log(xPDO::LOG_LEVEL_ERROR,'[modAccessManager] Could not find AdministratorTemplate Access Policy!');
+			}
+
+			break;
+	}
+}
+return true;

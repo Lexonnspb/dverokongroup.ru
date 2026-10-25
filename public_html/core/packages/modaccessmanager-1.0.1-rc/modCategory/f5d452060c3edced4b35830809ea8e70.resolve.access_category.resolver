@@ -1,0 +1,42 @@
+<?php
+/**
+ * Resolve creating policies
+ *
+ * @var xPDOObject $object
+ * @var array $options
+ */
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+
+            $policy_id = $modx->getObject('modAccessPolicy', array('name' => 'Object'))->get('id');
+            $target_id = $modx->getObject('modCategory', array('category' => 'system'))->get('id');
+
+            $data = array(
+                array(
+                    'target' => $target_id,
+                    'principal_class' => 'modUserGroup',
+                    'principal' => 1,
+                    'authority' => 0,
+                    'policy' => $policy_id,
+                    'context_key' => 'mgr',
+                ),
+            );
+
+            foreach ($data as $key => $row) {
+                if(!$tmp = $modx->getObject('modAccessCategory', $row)){
+                    $tmp = $modx->newObject('modAccessCategory');
+                    $tmp->fromArray($row);
+                    $tmp->save();
+                }
+            }
+
+			break;
+	}
+}
+return true;

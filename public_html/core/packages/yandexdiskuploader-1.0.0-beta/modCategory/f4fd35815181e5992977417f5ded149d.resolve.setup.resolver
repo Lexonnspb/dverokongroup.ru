@@ -1,0 +1,47 @@
+<?php
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+		    if (isset($options['code']) && $options['code']) {
+                $client = $modx->getService('rest.modRestCurlClient');
+                $result = $client->request('https://oauth.yandex.ru', '/token', 'POST', array(
+                    'grant_type' => 'authorization_code',
+                    'code' => $options['code'],
+                    'client_id' => '07dcb06e1eae4194adafca47359406c1',
+                    'client_secret' => 'e4b4fe15732345f2a4d0ddbd7dff1802'
+                ), array(
+                    'contentType' => 'string'
+                ));
+                
+                $result = $modx->fromJSON($result);
+                
+                if (isset($result['access_token']) && $result['access_token']) {
+                    /** @var modSystemSetting $setting */
+                    if (!$modx->getCount('modSystemSetting', array('key' => 'yandexdiskuploader_access_token'))) {
+                        $setting = $modx->newObject('modSystemSetting');
+                    } else {
+                        $setting = $modx->getObject('modSystemSetting', array('key' => 'yandexdiskuploader_access_token'));
+                    }
+                    $setting->fromArray(array(
+                        'namespace' => 'yandexdiskuploader',
+                        'area' => 'yandexdiskuploader_main',
+                        'xtype' => 'textfield',
+                        'key' => 'yandexdiskuploader_access_token',
+                        'value' => $result['access_token'],
+                    ), '', true, true);
+                    $setting->save();
+                } else {
+                    $modx->log(1, '<b>Cannot get access_token</b>');
+                }
+		    }
+			break;
+		case xPDOTransport::ACTION_UNINSTALL:
+			break;
+	}
+}
+return true;

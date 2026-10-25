@@ -1,0 +1,91 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '6e6cd35e2d9c6882a87cffc5767f5452' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"modRelation","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"if (empty($field)) {\\n  $field = \'pagetitle\';\\n}\\nif (empty($separator)) {\\n  $separator = \' \';\\n}\\nif (empty($element)) {\\n  $element = \'pdoResources\';\\n}\\nif (empty($limitWord)) {\\n  $limitWord = 4;\\n} else {\\n  $limitWord = intval($limitWord);\\n}\\n$pagetitle = $modx->resource->get($field);\\nif (!$pagetitle) {\\n  return ;\\n}\\n$arr = explode($separator, $pagetitle);\\n$rand = array_rand($arr, 1);\\nwhile (iconv_strlen($arr[$rand]) < $limitWord):\\n  $rand = array_rand($arr, 1);\\nendwhile;\\n\\n$rand_pt = $arr[$rand];\\nif ($substr) {\\n  $rand_pt = mb_substr($rand_pt, 0, $substr, \'UTF-8\');\\n}\\n\\/\\/echo $rand_pt;\\n$where = array(\'where\' => array(\\n    $field.\':LIKE\' => \'%\'.$rand_pt.\'%\',\\n    \'id:!=\' => $modx->resource->id\\n));\\n\\n$scriptProperties = array_merge($where, $scriptProperties);\\n$pdoTools = $modx->getService(\'pdoTools\');\\nreturn $pdoTools->runSnippet($element, $scriptProperties);","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"if (empty($field)) {\\n  $field = \'pagetitle\';\\n}\\nif (empty($separator)) {\\n  $separator = \' \';\\n}\\nif (empty($element)) {\\n  $element = \'pdoResources\';\\n}\\nif (empty($limitWord)) {\\n  $limitWord = 4;\\n} else {\\n  $limitWord = intval($limitWord);\\n}\\n$pagetitle = $modx->resource->get($field);\\nif (!$pagetitle) {\\n  return ;\\n}\\n$arr = explode($separator, $pagetitle);\\n$rand = array_rand($arr, 1);\\nwhile (iconv_strlen($arr[$rand]) < $limitWord):\\n  $rand = array_rand($arr, 1);\\nendwhile;\\n\\n$rand_pt = $arr[$rand];\\nif ($substr) {\\n  $rand_pt = mb_substr($rand_pt, 0, $substr, \'UTF-8\');\\n}\\n\\/\\/echo $rand_pt;\\n$where = array(\'where\' => array(\\n    $field.\':LIKE\' => \'%\'.$rand_pt.\'%\',\\n    \'id:!=\' => $modx->resource->id\\n));\\n\\n$scriptProperties = array_merge($where, $scriptProperties);\\n$pdoTools = $modx->getService(\'pdoTools\');\\nreturn $pdoTools->runSnippet($element, $scriptProperties);"}',
+        'guid' => 'e5cf144101f548475fe9b6362d4050b4',
+        'native_key' => NULL,
+        'signature' => 'c4f3c9ca42470187fd00cba035e17a66',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'modrelation',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modrelation-1.0.2-beta\\/modCategory\\/cec1834f184a9994ee8254a3edc49e3b\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"modrelation"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"modrelation-1.0.2-beta\\/modCategory\\/cec1834f184a9994ee8254a3edc49e3b\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"modrelation"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modrelation-1.0.2-beta\\/modCategory\\/cec1834f184a9994ee8254a3edc49e3b.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modrelation-1.0.2-beta\\/modCategory\\/cec1834f184a9994ee8254a3edc49e3b.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modrelation-1.0.2-beta\\/modCategory\\/cec1834f184a9994ee8254a3edc49e3b.package.resolver.resolver","type":"php","name":"package.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2abbc8fca82e537aa7b8a281791a7e34',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'cec1834f184a9994ee8254a3edc49e3b',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"modRelation","rank":0}',
+);

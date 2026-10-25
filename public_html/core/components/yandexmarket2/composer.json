@@ -1,0 +1,40 @@
+{
+  "name": "sheronov/yandexmarket2",
+  "description": "YandexMarket2 component for MODX Revolution",
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0|^8.0",
+    "ext-xmlwriter": "*",
+    "ext-xmlreader": "*",
+    "haydenpierce/class-finder": "0.4.2",
+    "agelxnash/jevix": "dev-master"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^6.5",
+    "ext-fileinfo": "*",
+    "ext-intl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "repositories": [
+    {
+      "url": "https://github.com/sheronov/Jevix.git",
+      "type": "git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "YandexMarket\\": "src/",
+      "YandexMarket\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.0.0"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}

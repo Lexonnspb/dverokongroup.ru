@@ -1,0 +1,109 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => false,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '97bf5f874e9d2ee8e807ebb1f1952319' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"modAccessManager","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch ($modx->event->name) {\\n\\n    case \'OnCacheUpdate\':\\n        if ($modx->context->key == \'mgr\') {\\n\\n            $modUserGroup = $modx->getObject(\'modUserGroup\', array(\'name\' => \'Manager\'));\\n            $group_id = $modUserGroup->get(\'id\');\\n\\n            $modAccessPolicy = $modx->getObject(\'modAccessPolicy\', array(\'name\' => \'Manager\'));\\n            $policy_id = $modAccessPolicy->get(\'id\');\\n\\n            $modAccessPolicyContext = $modx->getObject(\'modAccessPolicy\', array(\'name\' => \'Context\'));\\n            $policy_context_id = $modAccessPolicyContext->get(\'id\');\\n\\n\\n            $c = $modx->newQuery(\'modAccessContext\');\\n            $c->where(array(\'principal\' => $group_id, \'policy:!=\' => $policy_id));\\n            if ($objectList = $modx->getCollection(\'modAccessContext\', $c)) {\\n                foreach ($objectList as $object) {\\n                    $policy = $object->get(\'policy\');\\n                    if ($policy_context_id == $policy) continue;\\n                    $object->remove();\\n                }\\n            }\\n\\n\\n            \\/* search policy access *\\/\\n            $data = array();\\n            $c = $modx->newQuery(\'modAccessPolicy\');\\n            $c->where(array(\'lexicon:!=\' => \'permissions\'));\\n            if ($objectList = $modx->getCollection(\'modAccessPolicy\', $c)) {\\n                foreach ($objectList as $object) {\\n                    $id = $object->get(\'id\');\\n                    $data[] = array(\\n                        \'target\' => \'mgr\',\\n                        \'principal_class\' => \'modUserGroup\',\\n                        \'principal\' => $group_id,\\n                        \'authority\' => 9,\\n                        \'policy\' => $id,\\n                    );\\n\\n                }\\n            }\\n\\n            foreach ($data as $key => $row) {\\n                if (!$tmp = $modx->getObject(\'modAccessContext\', $row)) {\\n                    $tmp = $modx->newObject(\'modAccessContext\');\\n                    $tmp->fromArray($row);\\n                    $tmp->save();\\n                }\\n            }\\n\\n        }\\n\\n    break;\\n\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/modaccessmanager\\/elements\\/plugins\\/plugin.modaccessmanager.php","content":"switch ($modx->event->name) {\\n\\n    case \'OnCacheUpdate\':\\n        if ($modx->context->key == \'mgr\') {\\n\\n            $modUserGroup = $modx->getObject(\'modUserGroup\', array(\'name\' => \'Manager\'));\\n            $group_id = $modUserGroup->get(\'id\');\\n\\n            $modAccessPolicy = $modx->getObject(\'modAccessPolicy\', array(\'name\' => \'Manager\'));\\n            $policy_id = $modAccessPolicy->get(\'id\');\\n\\n            $modAccessPolicyContext = $modx->getObject(\'modAccessPolicy\', array(\'name\' => \'Context\'));\\n            $policy_context_id = $modAccessPolicyContext->get(\'id\');\\n\\n\\n            $c = $modx->newQuery(\'modAccessContext\');\\n            $c->where(array(\'principal\' => $group_id, \'policy:!=\' => $policy_id));\\n            if ($objectList = $modx->getCollection(\'modAccessContext\', $c)) {\\n                foreach ($objectList as $object) {\\n                    $policy = $object->get(\'policy\');\\n                    if ($policy_context_id == $policy) continue;\\n                    $object->remove();\\n                }\\n            }\\n\\n\\n            \\/* search policy access *\\/\\n            $data = array();\\n            $c = $modx->newQuery(\'modAccessPolicy\');\\n            $c->where(array(\'lexicon:!=\' => \'permissions\'));\\n            if ($objectList = $modx->getCollection(\'modAccessPolicy\', $c)) {\\n                foreach ($objectList as $object) {\\n                    $id = $object->get(\'id\');\\n                    $data[] = array(\\n                        \'target\' => \'mgr\',\\n                        \'principal_class\' => \'modUserGroup\',\\n                        \'principal\' => $group_id,\\n                        \'authority\' => 9,\\n                        \'policy\' => $id,\\n                    );\\n\\n                }\\n            }\\n\\n            foreach ($data as $key => $row) {\\n                if (!$tmp = $modx->getObject(\'modAccessContext\', $row)) {\\n                    $tmp = $modx->newObject(\'modAccessContext\');\\n                    $tmp->fromArray($row);\\n                    $tmp->save();\\n                }\\n            }\\n\\n        }\\n\\n    break;\\n\\n}"}',
+        'guid' => '460c398db7e009bda7ec0a395a52d1ee',
+        'native_key' => 0,
+        'signature' => 'e6f2a2c3cc89fcb8053fd7437d84bb20',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '630f5f9e35c5e482369c92382a60f3ed' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnCacheUpdate","priority":0,"propertyset":0}',
+              'guid' => '2273535f81a56a8a8b34ee0d9b393f2e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnCacheUpdate',
+              ),
+              'signature' => '9e3ffe1e6467b1b2ff5da1fbf662677c',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'modaccessmanager',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.sources.resolver","type":"php","name":"resolve.sources"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.policy.resolver","type":"php","name":"resolve.policy"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.resourcegroup.resolver","type":"php","name":"resolve.resourcegroup"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.access_category.resolver","type":"php","name":"resolve.access_category"}',
+    ),
+    5 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"modaccessmanager-1.0.1-rc\\/modCategory\\/f5d452060c3edced4b35830809ea8e70.resolve.access_context.resolver","type":"php","name":"resolve.access_context"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6bc9974bb391ff3267bfafc350005d38',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'f5d452060c3edced4b35830809ea8e70',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"system","rank":0}',
+);

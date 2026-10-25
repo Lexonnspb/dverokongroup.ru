@@ -1,0 +1,18 @@
+Changelog for mxManager.
+
+1.0.3-pl
+==============
+- Fixed save property "disabled" for plugins.
+
+1.0.2-pl
+==============
+- [#14] Plugin is not static anymore.
+- Removed unnecessary files.
+
+1.0.1-pl
+==============
+- Fixed app crash on multiple contexts with empty names.
+
+1.0.0-pl
+==============
+- Initial version

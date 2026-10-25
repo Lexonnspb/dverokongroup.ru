@@ -1,0 +1,95 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Chunks' => 
+    array (
+      '15c0da0aad84c2bac14a60c64055c2ad' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modChunk',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"tpl.YandexDiskUploader","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"<div class=\\"yaDiskUploader\\" data-name=\\"[[+name]]\\"><div class=\\"dz-message\\">\\u041f\\u0440\\u0438\\u043a\\u0440\\u0435\\u043f\\u0438\\u0442\\u044c \\u0444\\u0430\\u0439\\u043b\\u044b<\\/div><\\/div>","locked":0,"properties":null,"static":0,"static_file":"core\\/components\\/yandexdiskuploader\\/elements\\/chunks\\/chunk.yandexdiskuploader.tpl","content":"<div class=\\"yaDiskUploader\\" data-name=\\"[[+name]]\\"><div class=\\"dz-message\\">\\u041f\\u0440\\u0438\\u043a\\u0440\\u0435\\u043f\\u0438\\u0442\\u044c \\u0444\\u0430\\u0439\\u043b\\u044b<\\/div><\\/div>"}',
+        'guid' => 'fdc1de26ff764692778a882fe0f5c3b1',
+        'native_key' => 0,
+        'signature' => '3a194c26b1f81b03a5b8b5f176ef0f18',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      '29ee4c26de198789d517ac9f0fb27178' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":0,"source":1,"property_preprocess":0,"name":"YandexDiskUploader","description":"","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\n$sp = &$scriptProperties;\\n\\n$tpl = $modx->getOption(\'tpl\', $sp, \'tpl.YandexDiskUploader\');\\n$inputId = $modx->getOption(\'inputId\', $sp, \'file\');\\n$css = $modx->getOption(\'yandexdiskuploader_frontend_css\', null, \'[[+cssUrl]]web\\/default.css\');\\n$js = $modx->getOption(\'yandexdiskuploader_frontend_js\', null, \'[[+jsUrl]]web\\/default.js\');\\n$css = str_replace(\'[[+cssUrl]]\', $modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/css\\/\', $css);\\n$js = str_replace(\'[[+jsUrl]]\', $modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/js\\/\', $js);\\n\\n\\nif (isset($_FILES[$inputId]) && $_FILES[$inputId]) {\\n    $headers = array(\\"Authorization: OAuth \\" . $modx->getOption(\'yandexdiskuploader_access_token\'), \\"Content-Type: application\\/json\\");\\n    if (!isset($_SESSION[\'yaDiskUpload_user\']) || !$_SESSION[\'yaDiskUpload_user\']) {\\n        $_SESSION[\'yaDiskUpload_user\'] = date(\'H_i_s\');\\n    }\\n    $user = $_SESSION[\'yaDiskUpload_user\'];\\n    $path = date(\'Y-m-d\') . \'\\/\' . $inputId . \'\\/\' . $user;\\n    $root = \'disk:\\/\\u041f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u044f\\/MODX \\u042f\\u043d\\u0434\\u0435\\u043a\\u0441.\\u0414\\u0438\\u0441\\u043a\\/\';\\n    foreach (explode(\'\\/\', $path) as $dir) {\\n        $root = $root . $dir . \'\\/\';\\n        $ch = curl_init(\'https:\\/\\/cloud-api.yandex.net\\/v1\\/disk\\/resources?path=\' . urlencode($root));\\n        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, \'PUT\');\\n        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n        curl_exec($ch);\\n        curl_close($ch);\\n    }\\n    $tmp = explode(\'.\', $_FILES[$inputId][\'name\']);\\n    $ext = array_pop($tmp);\\n    $file_name = implode(\'.\', $tmp) .\'-\'. substr(md5_file($_FILES[$inputId][\'tmp_name\']), 0, 5) . \'.\' . $ext;\\n    $ch = curl_init(\'https:\\/\\/cloud-api.yandex.net\\/v1\\/disk\\/resources\\/upload?path=\' . urlencode($root . $file_name));\\n    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n    $response = $modx->fromJSON(curl_exec($ch));\\n    curl_close($ch);\\n    if (isset($response[\'href\']) && $response[\'href\']) {\\n        $ch = curl_init($response[\'href\']);\\n        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, \'PUT\');\\n        curl_setopt($ch, CURLOPT_INFILE, fopen($_FILES[$inputId][\'tmp_name\'], \'r\'));\\n        curl_setopt($ch, CURLOPT_UPLOAD, true);\\n        curl_setopt($ch, CURLOPT_POST, false);\\n        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n        curl_exec($ch);\\n        curl_close($ch);\\n    }\\n    $output = array(\\n        \'inputId\' => $inputId,\\n        \'url\' => \'https:\\/\\/disk.yandex.ru\\/client\\/disk\\/\' . str_replace(\'disk:\\/\', \'\', $root)\\n    );\\n    print $modx->toJSON($output);\\n    die();\\n} else {\\n    $modx->regClientStartupScript($modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/js\\/web\\/dropzone.js\');\\n    $modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/css\\/web\\/dropzone.css\');\\n    $modx->regClientCSS($css);\\n    $modx->regClientScript($js);\\n    return $modx->getChunk($tpl, array(\'name\' => $inputId));\\n}","locked":0,"properties":"a:2:{s:3:\\"tpl\\";a:7:{s:4:\\"name\\";s:3:\\"tpl\\";s:4:\\"desc\\";s:27:\\"yandexdiskuploader_prop_tpl\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:22:\\"tpl.YandexDiskUploader\\";s:7:\\"lexicon\\";s:29:\\"yandexdiskuploader:properties\\";s:4:\\"area\\";s:0:\\"\\";}s:7:\\"inputId\\";a:7:{s:4:\\"name\\";s:7:\\"inputId\\";s:4:\\"desc\\";s:31:\\"yandexdiskuploader_prop_inputId\\";s:4:\\"type\\";s:9:\\"textfield\\";s:7:\\"options\\";a:0:{}s:5:\\"value\\";s:4:\\"file\\";s:7:\\"lexicon\\";s:29:\\"yandexdiskuploader:properties\\";s:4:\\"area\\";s:0:\\"\\";}}","moduleguid":"","static":0,"static_file":"core\\/components\\/yandexdiskuploader\\/elements\\/snippets\\/snippet.yandexdiskuploader.php","content":"\\/** @var modX $modx *\\/\\n\\/** @var array $scriptProperties *\\/\\n\\n$sp = &$scriptProperties;\\n\\n$tpl = $modx->getOption(\'tpl\', $sp, \'tpl.YandexDiskUploader\');\\n$inputId = $modx->getOption(\'inputId\', $sp, \'file\');\\n$css = $modx->getOption(\'yandexdiskuploader_frontend_css\', null, \'[[+cssUrl]]web\\/default.css\');\\n$js = $modx->getOption(\'yandexdiskuploader_frontend_js\', null, \'[[+jsUrl]]web\\/default.js\');\\n$css = str_replace(\'[[+cssUrl]]\', $modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/css\\/\', $css);\\n$js = str_replace(\'[[+jsUrl]]\', $modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/js\\/\', $js);\\n\\n\\nif (isset($_FILES[$inputId]) && $_FILES[$inputId]) {\\n    $headers = array(\\"Authorization: OAuth \\" . $modx->getOption(\'yandexdiskuploader_access_token\'), \\"Content-Type: application\\/json\\");\\n    if (!isset($_SESSION[\'yaDiskUpload_user\']) || !$_SESSION[\'yaDiskUpload_user\']) {\\n        $_SESSION[\'yaDiskUpload_user\'] = date(\'H_i_s\');\\n    }\\n    $user = $_SESSION[\'yaDiskUpload_user\'];\\n    $path = date(\'Y-m-d\') . \'\\/\' . $inputId . \'\\/\' . $user;\\n    $root = \'disk:\\/\\u041f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u044f\\/MODX \\u042f\\u043d\\u0434\\u0435\\u043a\\u0441.\\u0414\\u0438\\u0441\\u043a\\/\';\\n    foreach (explode(\'\\/\', $path) as $dir) {\\n        $root = $root . $dir . \'\\/\';\\n        $ch = curl_init(\'https:\\/\\/cloud-api.yandex.net\\/v1\\/disk\\/resources?path=\' . urlencode($root));\\n        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, \'PUT\');\\n        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n        curl_exec($ch);\\n        curl_close($ch);\\n    }\\n    $tmp = explode(\'.\', $_FILES[$inputId][\'name\']);\\n    $ext = array_pop($tmp);\\n    $file_name = implode(\'.\', $tmp) .\'-\'. substr(md5_file($_FILES[$inputId][\'tmp_name\']), 0, 5) . \'.\' . $ext;\\n    $ch = curl_init(\'https:\\/\\/cloud-api.yandex.net\\/v1\\/disk\\/resources\\/upload?path=\' . urlencode($root . $file_name));\\n    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n    $response = $modx->fromJSON(curl_exec($ch));\\n    curl_close($ch);\\n    if (isset($response[\'href\']) && $response[\'href\']) {\\n        $ch = curl_init($response[\'href\']);\\n        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);\\n        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, \'PUT\');\\n        curl_setopt($ch, CURLOPT_INFILE, fopen($_FILES[$inputId][\'tmp_name\'], \'r\'));\\n        curl_setopt($ch, CURLOPT_UPLOAD, true);\\n        curl_setopt($ch, CURLOPT_POST, false);\\n        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\\n        curl_exec($ch);\\n        curl_close($ch);\\n    }\\n    $output = array(\\n        \'inputId\' => $inputId,\\n        \'url\' => \'https:\\/\\/disk.yandex.ru\\/client\\/disk\\/\' . str_replace(\'disk:\\/\', \'\', $root)\\n    );\\n    print $modx->toJSON($output);\\n    die();\\n} else {\\n    $modx->regClientStartupScript($modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/js\\/web\\/dropzone.js\');\\n    $modx->regClientCSS($modx->getOption(\'assets_url\') . \'components\\/yandexdiskuploader\\/css\\/web\\/dropzone.css\');\\n    $modx->regClientCSS($css);\\n    $modx->regClientScript($js);\\n    return $modx->getChunk($tpl, array(\'name\' => $inputId));\\n}"}',
+        'guid' => '2b4471d4f6653033ffd69c25da34849c',
+        'native_key' => 0,
+        'signature' => '45285741a04a80197fdf5a23e8b29648',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'yandexdiskuploader',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"yandexdiskuploader-1.0.0-beta\\/modCategory\\/f4fd35815181e5992977417f5ded149d.resolve.setup.resolver","type":"php","name":"resolve.setup"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"yandexdiskuploader-1.0.0-beta\\/modCategory\\/f4fd35815181e5992977417f5ded149d\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"yandexdiskuploader"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"yandexdiskuploader-1.0.0-beta\\/modCategory\\/f4fd35815181e5992977417f5ded149d\\/2\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"yandexdiskuploader"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b27e5d4796f286466324aa19cbe60caa',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => 'f4fd35815181e5992977417f5ded149d',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"YandexDiskUploader","rank":0}',
+);

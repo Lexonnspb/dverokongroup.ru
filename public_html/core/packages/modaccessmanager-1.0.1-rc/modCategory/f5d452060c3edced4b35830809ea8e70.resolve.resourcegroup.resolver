@@ -1,0 +1,42 @@
+<?php
+/**
+ * Resolve creating policies
+ *
+ * @var xPDOObject $object
+ * @var array $options
+ */
+
+if ($object->xpdo) {
+	/* @var modX $modx */
+	$modx =& $object->xpdo;
+
+	switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+		case xPDOTransport::ACTION_INSTALL:
+		case xPDOTransport::ACTION_UPGRADE:
+
+            $policy_id      = $modx->getObject('modAccessPolicy',   array('name' => 'Load Only'))->get('id');
+
+            // modResourceGroup
+            $data = array(
+                array(
+                    'target'            => BUILD_PARAMS_GROUP_RESOURCE,
+                    'principal_class'   => 'modUserGroup',
+                    'principal'         => BUILD_PARAMS_USER_GROUP,
+                    'authority'         => BUILD_PARAMS_ROLE_MANAGER,
+                    'policy'            => $policy_id,
+                    'context_key'       => 'mgr',
+                ),
+            );
+
+            foreach ($data as $key => $row) {
+                if(!$tmp = $modx->getObject('modAccessResourceGroup', $row)){
+                    $tmp = $modx->newObject('modAccessResourceGroup');
+                    $tmp->fromArray($row);
+                    $tmp->save();
+                }
+            }
+
+			break;
+	}
+}
+return true;

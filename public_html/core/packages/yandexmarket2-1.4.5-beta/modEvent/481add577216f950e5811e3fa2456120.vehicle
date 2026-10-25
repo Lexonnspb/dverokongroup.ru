@@ -1,0 +1,17 @@
+<?php return array (
+  'vehicle_class' => 'EncryptedVehicle',
+  'vehicle_package' => 'transport',
+  'abort_install_on_vehicle_fail' => true,
+  'preserve_keys' => true,
+  'update_object' => false,
+  'unique_key' => 'name',
+  'namespace' => 'yandexmarket2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'guid' => 'e3f5cf2e601b6ba79427d9b8790c1986',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '481add577216f950e5811e3fa2456120',
+  'native_key' => 'ym2OnBeforeWritingCategory',
+  'object_encrypted' => 'KxjajWmcbOrM1hmmtTzLetEKphSQ1d3bPQXwNHfYtzI5KWnuCoEBADrQyu20LqYo+rX5V9N/gS/PJYc11KcsA0Q6OfrvoCaAWYKMXkQ81FnrHyRTSRyN8hEn5iNdga0xh1p58ebxzkH9itrQbiQLOA==',
+);

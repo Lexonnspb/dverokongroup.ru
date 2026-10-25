@@ -1,0 +1,44 @@
+Changelog for ResVideoGallery integration into MODx Revolution.
+
+ResVideoGallery 1.0.8
+====================================
+- Fix: Tag preservation from video in product
+
+ResVideoGallery 1.0.7
+====================================
+- Added: Parameters "parents", "excludeResources" , "includeTags", "tplTag", "autoPlay" for snippet ResVideoGallery
+- Added: Snippet ResVideoGalleryTags
+- Added: Filtering by tag
+- Fix: Get preview for video in Revolution 2.5.1
+
+ResVideoGallery 1.0.6
+====================================
+- Fix: Integration with ms2Gallery
+
+ResVideoGallery 1.0.5
+====================================
+- Update: Parse links vk
+
+ResVideoGallery 1.0.4
+====================================
+- Update: Parse links youtube
+- Fix: Parse video duration for youtube
+
+ResVideoGallery 1.0.3
+====================================
+- Fix: Format video duration on front-end
+
+ResVideoGallery 1.0.2
+====================================
+- Added: Reload video preview
+- Added: Adding video from frontend
+
+ResVideoGallery 1.0.1
+====================================
+- Added: Integration with ms2Gallery
+- Added: Pre and post hooks
+- Added: Custom video providers
+
+ResVideoGallery 1.0.0
+====================================
+- First release

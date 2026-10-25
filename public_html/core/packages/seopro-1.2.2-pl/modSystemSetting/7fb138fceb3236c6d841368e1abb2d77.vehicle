@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'seopro',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ab5c1d55e9bc72ccf84b94b6514fb447',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7fb138fceb3236c6d841368e1abb2d77',
+  'native_key' => 'seopro.delimiter',
+  'object' => '{"key":"seopro.delimiter","value":"|","xtype":"textfield","namespace":"seopro","area":"general","editedon":null}',
+);

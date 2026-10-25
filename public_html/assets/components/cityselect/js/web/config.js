@@ -1,0 +1,6 @@
+cityConfig = {
+	token: ""
+  	,key: ""
+
+};
+					

@@ -1,0 +1,24 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => true,
+  'namespace' => 'yasmtp',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"yasmtp-1.0.1-beta\\/modCategory\\/3cae7f346b6882bf89cfcb7126abfe6c.resolve.setup.resolver","type":"php","name":"resolve.setup"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'b9f89c1fb7cc59f29fc221ecef3edfc7',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '3cae7f346b6882bf89cfcb7126abfe6c',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"yaSMTP","rank":0}',
+);

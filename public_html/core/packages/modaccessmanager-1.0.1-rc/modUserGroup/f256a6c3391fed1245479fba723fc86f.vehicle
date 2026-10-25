@@ -1,0 +1,19 @@
+<?php return array (
+  'preserve_keys' => false,
+  'unique_key' => 
+  array (
+    0 => 'name',
+  ),
+  'update_object' => true,
+  'namespace' => 'modaccessmanager',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '273880f67cc02cd9269c17a0189d7570',
+  'package' => 'modx',
+  'class' => 'modUserGroup',
+  'signature' => 'f256a6c3391fed1245479fba723fc86f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"Manager","description":"Limited access to the site only for managers","parent":1,"rank":0,"dashboard":1}',
+);

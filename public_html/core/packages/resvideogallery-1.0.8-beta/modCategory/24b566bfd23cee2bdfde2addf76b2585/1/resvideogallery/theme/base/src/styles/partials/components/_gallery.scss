@@ -1,0 +1,298 @@
+*,:after,:before {
+  @include box-sizing(border-box);
+}
+
+
+.rvg-iframe {
+  position: relative;
+  overflow: hidden;
+  @include respond-to(small-only) { min-height: 200px; }
+  @include respond-to(medium-up) { min-height: 400px; }
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+
+
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.rvg-gallery {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.rvg-gallery-fluid {
+  @include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.rvg-gallery-holder {
+  @include make-row;
+  text-align: center;
+}
+
+
+
+.rvg-gallery-item {
+  background: $item-bg;
+  margin: $item-margin;
+  padding: $item-padding;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  box-shadow: $item-shadow;
+  text-align: center;
+  border-radius: 3px;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  &:hover {
+    .rvg-gallery-item-btn {
+       opacity: 1;
+    }
+  }
+}
+
+.rvg-gallery-item-wrap {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.rvg-gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  z-index: 1;
+}
+
+.rvg-gallery-item-duration {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 8px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.rvg-gallery-item-btn {
+  display: table;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &.rvg-show {
+   opacity: 1;
+  }
+  & > *:first-child {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.rvg-gallery-item-caption {
+  position: absolute;
+  display: table;
+  background: rgba(0,0,0,$opacity-caption);
+  width: 100%;
+  max-height: 10%;
+  left: 0;
+  bottom: 0;
+  color: $color-caption-text;
+  font-size: 12px;
+  line-height: normal;
+  transition: all .5s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 2;
+  span {
+    display: table-cell;
+    padding: 5px 10px;
+    text-align: left;
+  }
+  &:before {
+    content: "\e804";
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background: $color-btn-play;
+    width: 28px;
+    z-index: 2;
+    font: normal normal normal 14px/1 resvideogallery;
+
+  }
+}
+
+.rvg-tags {
+   margin: $tags-margin;
+}
+
+.rvg-tag {
+  display: $tag-display;
+  background: $tag-bg;
+  margin: $tag-margin;
+  padding: $tag-padding;
+  border-radius: $tag-radius;
+  font-size: $tag-font-size;
+  color: $tag-color;
+  text-decoration: none;
+  &:hover {
+    background: $tag-bg-hover;
+    color: $tag-color-hover;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &.rvg-tag-active {
+    background: $tag-bg-active;
+    color: $tag-color-active;
+    &:hover {
+      background: $tag-bg-active-hover;
+      color: $tag-color-active-hover;
+    }
+  }
+ }
+
+.rvg-icon {
+  position: relative;
+  display: inline-block;
+  width: $width-btn-play;
+  height: $height-btn-play;
+  margin: 15px 3px;
+  border-radius: 50%;
+  background: $color-btn-play;
+  text-align: center;
+  font-size: $size-btn-icon-play;
+  color: $color-btn-icon-play;
+  opacity: $opacity-btn-play;
+  transition: all 0.1s ease-in-out 0s;
+  &:before {
+    line-height: $height-btn-play;
+    margin: 0;
+  }
+  &:hover {
+    opacity: $opacity-btn-play-hover;
+  }
+  &.rvg-hover-1 {
+    box-shadow: 0 0 0 4px $color-btn-play;
+    background:none;
+    transition: color 0.3s;
+    &:after {
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -2px;
+      left: -2px;
+      padding: 2px;
+      border-radius: 50%;
+      content: '';
+      box-sizing: content-box;
+      z-index: -1;
+      background: $color-btn-play;
+      transition: transform 0.2s, opacity 0.3s;
+    }
+    &:hover {
+      color: $color-btn-play;
+      &:before {
+        transform: scale(1.5);
+      }
+      &:after {
+        transform: scale(1.3);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.rvg-text-center { text-align: center; }
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include rvg-make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include rvg-make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include rvg-make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include rvg-make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include rvg-make-grid(lg);
+}
